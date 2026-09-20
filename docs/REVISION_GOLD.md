@@ -87,15 +87,15 @@ Una cosa que no haría todavía: un `check_gold.py` con estas verificaciones. La
 2. ¿Agregamos `wearing` y `drowning`? Si sí, hay que reencadenar el `next` de esas dos historias.
 3. Coordinación ("windshield **and** body"): ¿una fila o dos?
 4. Agente implícito ("to keep her warm"): ¿se anota o se omite?
-6. "they" con dos referentes: ¿referente principal, dos filas, u omitir?
-7. `grandparent` vs `grandpa`: ¿se unifica o se deja la variación del texto?
+5. "they" con dos referentes: ¿referente principal, dos filas, u omitir?
+6. `grandparent` vs `grandpa`: ¿se unifica o se deja la variación del texto?
 
 
 ## Respuestas de Diego
 
-- Objeect, fue intencional
-- No agregarlo
-- Dos filas
-- Se omite
-- Dos filas
-- Unificarlo
+1. Objeect, fue intencional
+2. No agregarlo
+3. Dos filas
+4. Se omite
+5. Dos filas
+6. Unificarlo
