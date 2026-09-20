@@ -83,7 +83,7 @@ Por qué este esquema:
 
 - **Normalización:** minúsculas y sin puntuación. Si `event` trae varias palabras, se toma la primera; si `arg` trae varias, la última.
 - **Acierto:** `(story_id, event, rel, arg)` coincide exactamente con el gold. `arg_type` no entra en la clave.
-- **Salida inválida** (no parsea o no valida): cuenta como grafo vacío.
+- **Salida inválida** (no parsea o no valida): cuenta como grafo vacío. La validez es de la salida completa y se juzga igual en las tres condiciones: si una sola tripleta o línea falla, toda la salida cuenta como vacía. En texto eso significa que basta una línea que no calce con el formato.
 
 Métricas por modelo × condición:
 
