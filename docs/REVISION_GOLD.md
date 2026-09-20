@@ -89,3 +89,13 @@ Una cosa que no haría todavía: un `check_gold.py` con estas verificaciones. La
 4. Agente implícito ("to keep her warm"): ¿se anota o se omite?
 5. "they" con dos referentes: ¿referente principal, dos filas, u omitir?
 6. `grandparent` vs `grandpa`: ¿se unifica o se deja la variación del texto?
+
+
+## Respuestas de Diego
+
+1. Objeect, fue intencional
+2. No agregarlo
+3. Dos filas
+4. Se omite
+5. Dos filas
+6. Unificarlo
