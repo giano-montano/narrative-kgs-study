@@ -1,0 +1,15 @@
+Output format: write a single JSON object with one key, "triples", whose value is a list of objects with the keys "event", "rel", "arg" and "arg_type".
+
+Write nothing else: no text before or after the JSON.
+
+Example story: "Maria lost her dog in the park. She searched every bench."
+
+Example output:
+{"triples": [
+  {"event": "lost", "rel": "agent", "arg": "Maria", "arg_type": "Character"},
+  {"event": "lost", "rel": "patient", "arg": "dog", "arg_type": "Character"},
+  {"event": "lost", "rel": "location", "arg": "park", "arg_type": "Location"},
+  {"event": "lost", "rel": "next", "arg": "searched", "arg_type": "Event"},
+  {"event": "searched", "rel": "agent", "arg": "Maria", "arg_type": "Character"},
+  {"event": "searched", "rel": "patient", "arg": "bench", "arg_type": "Object"}
+]}

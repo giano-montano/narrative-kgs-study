@@ -1,0 +1,22 @@
+You extract a narrative knowledge graph from a short story.
+
+The graph is a set of triples (event, rel, arg, arg_type):
+- event: one word, the verb exactly as it appears in the text ("lost", not "lose").
+- rel: one of
+  - agent: who performs the event,
+  - patient: who or what is directly affected by the event,
+  - location: where the event happens,
+  - next: the following event in text order.
+- arg: one word, a proper name or a head noun; for "next", another event.
+- arg_type: one of
+  - Character: people and animals,
+  - Object,
+  - Location,
+  - Event: only with "next".
+
+Annotation rules:
+1. Event: every verb that expresses an action or occurrence. Do not count "be", the auxiliaries "have" and "do", or modals (can, could, will, would, should, may, might, must). "decided to buy" is two events: "decided" and "buy". In a phrasal verb only the verb counts ("picked up" -> "picked").
+2. Argument: the proper name if there is one; otherwise the last noun, without articles or possessives ("her dog" -> "dog", "ice cream" -> "cream").
+3. Pronouns: replace them with the name or head noun they refer to ("She" -> "Maria"). The narrator is "I".
+4. next: chain all events in text order.
+5. Only what is explicit: do not infer anything.

@@ -1,0 +1,16 @@
+model,condition,run,group,precision,recall,f1,tp,n_pred,n_gold,n_stories,pct_valid
+openai_gpt-oss-20b,json_estricto,1,all_no_next,1.0000,1.0000,1.0000,14,14,14,1,100.0000
+openai_gpt-oss-20b,json_estricto,1,agent,1.0000,1.0000,1.0000,6,6,6,1,100.0000
+openai_gpt-oss-20b,json_estricto,1,patient,1.0000,1.0000,1.0000,6,6,6,1,100.0000
+openai_gpt-oss-20b,json_estricto,1,location,1.0000,1.0000,1.0000,2,2,2,1,100.0000
+openai_gpt-oss-20b,json_estricto,1,next,1.0000,1.0000,1.0000,5,5,5,1,100.0000
+openai_gpt-oss-20b,json_objeto,1,all_no_next,1.0000,1.0000,1.0000,14,14,14,1,100.0000
+openai_gpt-oss-20b,json_objeto,1,agent,1.0000,1.0000,1.0000,6,6,6,1,100.0000
+openai_gpt-oss-20b,json_objeto,1,patient,1.0000,1.0000,1.0000,6,6,6,1,100.0000
+openai_gpt-oss-20b,json_objeto,1,location,1.0000,1.0000,1.0000,2,2,2,1,100.0000
+openai_gpt-oss-20b,json_objeto,1,next,1.0000,1.0000,1.0000,5,5,5,1,100.0000
+openai_gpt-oss-20b,texto,1,all_no_next,1.0000,1.0000,1.0000,14,14,14,1,100.0000
+openai_gpt-oss-20b,texto,1,agent,1.0000,1.0000,1.0000,6,6,6,1,100.0000
+openai_gpt-oss-20b,texto,1,patient,1.0000,1.0000,1.0000,6,6,6,1,100.0000
+openai_gpt-oss-20b,texto,1,location,1.0000,1.0000,1.0000,2,2,2,1,100.0000
+openai_gpt-oss-20b,texto,1,next,1.0000,1.0000,1.0000,5,5,5,1,100.0000

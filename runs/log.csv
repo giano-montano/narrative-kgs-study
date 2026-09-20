@@ -1,0 +1,4 @@
+timestamp,model,condition,run,story_id,prompt_tokens,completion_tokens,latency_s,error
+2026-09-18T06:45:19+00:00,openai/gpt-oss-20b,texto,1,ex_01,539,417,1.106,
+2026-09-18T06:45:21+00:00,openai/gpt-oss-20b,json_objeto,1,ex_01,701,514,1.031,
+2026-09-18T06:45:23+00:00,openai/gpt-oss-20b,json_estricto,1,ex_01,835,533,1.063,

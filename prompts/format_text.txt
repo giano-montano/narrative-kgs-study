@@ -1,0 +1,15 @@
+Output format: write one triple per line as
+
+event | rel | arg [arg_type]
+
+Write nothing else: no headers, no numbering, no explanations.
+
+Example story: "Maria lost her dog in the park. She searched every bench."
+
+Example output:
+lost | agent | Maria [Character]
+lost | patient | dog [Character]
+lost | location | park [Location]
+lost | next | searched [Event]
+searched | agent | Maria [Character]
+searched | patient | bench [Object]
