@@ -132,23 +132,28 @@ Plan gratuito de Groq, por modelo (verificar en la consola): 30 solicitudes/min,
 
 | Quién | Entregable                                           | Fecha           |
 | ----- | ---------------------------------------------------- | --------------- |
-| Diego | `stories.csv` + gold de dev (5 historias)            | sáb 19          |
-| Diego | Gold de test (30 historias), congelado               | mié 23          |
-| Diego | Sección de datos del paper                           | vie 25          |
-| Leo   | Pregunta, objetivos, hipótesis e introducción        | dom 20          |
-| Leo   | Estado del arte + plantilla TechRxiv                 | mié 23          |
-| Leo   | Discusión, conclusiones y ensamblado final           | dom 27          |
-| Giano | Pipeline de punta a punta con una historia inventada | sáb 19          |
-| Giano | Prompts congelados con dev                           | lun 21          |
-| Giano | Corridas de test (no dependen del gold)              | lun 21 – mar 22 |
-| Giano | Scoring y tabla de resultados                        | mié 23 – jue 24 |
-| Giano | Secciones de método y resultados                     | sáb 26          |
+| Quién | Entregable                                                  | Fecha          |
+| ----- | ----------------------------------------------------------- | -------------- |
+| Diego | `stories.csv` + gold de dev (5 historias)                   | sáb 19 (hecho) |
+| Giano | Pipeline de punta a punta con una historia inventada        | sáb 19 (hecho) |
+| Diego | Reglas nuevas en sección 4 y prompt; gold de dev corregido  | mar 22         |
+| Leo   | CLI de reparto + métricas faltantes de la sección 5         | mar 22 – mié 23 |
+| Leo   | Corrida de dev y prompts congelados                         | mié 23         |
+| Diego | Gold de test (30 historias), congelado                      | mié 23         |
+| Leo   | Corridas de test, filas 0–14                                | mié 23         |
+| Diego | Corridas de test, filas 15–29 (después de congelar el gold) | jue 24         |
+| Diego | Scoring final, tablas y gráficas                            | jue 24         |
+| Leo   | Paper: IV. Desarrollo y Ejecución; VII. Trabajo Futuro      | vie 25         |
+| Diego | Paper: V. Resultados y Discusión; VI. Conclusiones          | vie 25         |
 
-Únicas entregas entre personas:
+Meta: todo el desarrollo termina el **jue 24**. Giano orquesta con handoffs y no decide ni implementa. Cada persona decide sobre su área (ver `AGENTS.md`).
 
-1. `stories.csv` y gold de dev: Diego → Giano.
-2. Gold de test congelado: Diego → Giano.
-3. Tabla de resultados: Giano → Leo.
+Entregas entre personas, todas con un handoff en `handoffs/`:
+
+1. Reglas nuevas y gold de dev corregido: Diego → Leo.
+2. Prompts congelados: Leo → Diego.
+3. Gold de test congelado: Diego → Leo.
+4. Métricas implementadas y filas 0–14 de test: Leo → Diego.
 
 ## 10. Decisiones descartadas (no reintroducir)
 
