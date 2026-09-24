@@ -113,19 +113,57 @@ def process_story(client, args, system, story):
     append_log(row)
 
 
+def check_run_split(run, split):
+    if run.startswith("dev") and split != "dev":
+        raise ValueError(f"Run {run} requires split dev, got {split}")
+    if run in ("1", "2") and split != "test":
+        raise ValueError(f"Run {run} requires split test, got {split}")
+
+
+def select_stories(stories, split, start, end):
+    split_stories = stories[stories["split"] == split].reset_index(drop=True)
+    n = len(split_stories)
+    if start is None:
+        start = 0
+    if end is None:
+        end = n
+    if not (0 <= start < end <= n):
+        raise ValueError(f"Invalid range [{start}:{end}] for split '{split}' with {n} stories")
+    return split_stories.iloc[start:end]
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", required=True)
     parser.add_argument("--condition", required=True, choices=list(FORMAT_FILES))
-    parser.add_argument("--run", required=True, type=int)
+    parser.add_argument("--run", required=True, choices=["dev1", "dev2", "dev3", "1", "2"])
+    parser.add_argument("--split", required=True, choices=["dev", "test"])
+    parser.add_argument("--start", type=int)
+    parser.add_argument("--end", type=int)
     parser.add_argument("--stories", required=True, help="CSV con story_id, split, s1..s5")
     args = parser.parse_args()
 
+    try:
+        check_run_split(args.run, args.split)
+    except ValueError as e:
+        parser.error(str(e))
+
     stories = pd.read_csv(args.stories, dtype=str)
+    selected_stories = select_stories(stories, args.split, args.start, args.end)
+
+    if len(selected_stories) > 0:
+        first_id = selected_stories.iloc[0]["story_id"]
+        last_id = selected_stories.iloc[-1]["story_id"]
+    else:
+        first_id = "N/A"
+        last_id = "N/A"
+        
+    print(f"Procesando {len(selected_stories)} historias (desde {first_id} hasta {last_id})")
+
     system = system_prompt(args.condition)
     # sin reintentos automáticos del SDK: el 429 se maneja aquí
     client = groq.Groq(max_retries=0)
-    for story in stories.to_dict("records"):
+    for story in selected_stories.to_dict("records"):
         process_story(client, args, system, story)
 
 

@@ -37,12 +37,13 @@ Datos esperados: `data/stories.csv` (`story_id, split, s1..s5`) y `data/gold.csv
 Una llamada por historia. Se corre una condición a la vez:
 
 ```bash
-python run.py --model openai/gpt-oss-20b --condition texto --run 1 --stories data/stories.csv
+python run.py --model openai/gpt-oss-20b --condition texto --run 1 --split test --stories data/stories.csv
 ```
 
 - `--condition`: `texto`, `json_objeto` o `json_estricto`.
 - `--model`: `openai/gpt-oss-20b` o `openai/gpt-oss-120b`.
-- `--run`: número de corrida (1 en dev; 1 y 2 en test).
+- `--run`: número de corrida (`dev1`, `dev2`, `dev3` en dev; `1`, `2` en test).
+- `--split`: `dev` o `test`.
 
 Las respuestas quedan en `runs/<modelo>/<condicion>/<corrida>/<story_id>.txt` y cada llamada agrega una fila a `runs/log.csv` con tokens, latencia y errores.
 
@@ -57,7 +58,7 @@ Escribe `results/metrics.csv` con precisión, recall y F1 (principal sin `next`,
 Para probar que todo funciona sin tocar el corpus real, hay una historia inventada:
 
 ```bash
-python run.py --model openai/gpt-oss-20b --condition texto --run 1 --stories data/stories_example.csv
+python run.py --model openai/gpt-oss-20b --condition texto --run dev1 --split dev --stories data/stories_example.csv
 python score.py --gold data/gold_example.csv
 ```
 
