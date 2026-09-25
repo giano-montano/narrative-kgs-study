@@ -3,6 +3,7 @@ import json
 import re
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 from pydantic import ValidationError
 
@@ -107,6 +108,19 @@ def jaccard(a, b):
     return len(a & b) / len(a | b) if a or b else 1.0
 
 
+def story_f1(pred_keys, gold_keys):
+    return prf(pred_keys, gold_keys)[3]
+
+
+def bootstrap_ci(diffs, n_resamples=1000, seed=42):
+    d = np.asarray(diffs, dtype=float)
+    rng = np.random.default_rng(seed)
+    idx = rng.integers(0, len(d), size=(n_resamples, len(d)))
+    means = d[idx].mean(axis=1)
+    low, high = np.percentile(means, [2.5, 97.5])
+    return d.mean(), low, high
+
+
 def score_cell(outputs, gold, log, model, condition, run):
     # outputs: {story_id: lista de Triple o None}; P/R/F1 micro
     stories = set(outputs)
@@ -201,6 +215,51 @@ def main():
         stab_path = ROOT / "results" / "stability.csv"
         pd.DataFrame(stability_rows).to_csv(stab_path, index=False, float_format="%.4f")
         print(f"escrito {stab_path} ({len(stability_rows)} filas)")
+
+    bootstrap_rows = []
+    models = sorted(set(m for m, c, r in cells))
+    runs = ["1", "2"]
+    cond_pairs = [("texto", "json_objeto"), ("texto", "json_estricto"), ("json_objeto", "json_estricto")]
+    
+    for model in models:
+        for run in runs:
+            for cond_a, cond_b in cond_pairs:
+                if (model, cond_a, run) in cells and (model, cond_b, run) in cells:
+                    out_a = cells[(model, cond_a, run)]
+                    out_b = cells[(model, cond_b, run)]
+                    common_stories = sorted(set(out_a) & set(out_b))
+                    if not common_stories:
+                        continue
+                    
+                    diffs = []
+                    rels = GROUPS["all_no_next"]
+                    for sid in common_stories:
+                        ka = {key(sid, t.event, t.rel, t.arg) for t in (out_a[sid] or [])}
+                        ka = {k for k in ka if k[2] in rels}
+                        
+                        kb = {key(sid, t.event, t.rel, t.arg) for t in (out_b[sid] or [])}
+                        kb = {k for k in kb if k[2] in rels}
+                        
+                        g_set = {k for k in gold if k[0] == sid and k[2] in rels}
+                        
+                        fa = story_f1(ka, g_set)
+                        fb = story_f1(kb, g_set)
+                        diffs.append(fa - fb)
+                    
+                    if diffs:
+                        mean_diff, ci_low, ci_high = bootstrap_ci(diffs)
+                        bootstrap_rows.append({
+                            "model": model, "run": run, 
+                            "cond_a": cond_a, "cond_b": cond_b,
+                            "n_stories": len(diffs), 
+                            "mean_diff": mean_diff, 
+                            "ci_low": ci_low, "ci_high": ci_high
+                        })
+
+    if bootstrap_rows:
+        boot_path = ROOT / "results" / "bootstrap.csv"
+        pd.DataFrame(bootstrap_rows).to_csv(boot_path, index=False, float_format="%.4f")
+        print(f"escrito {boot_path} ({len(bootstrap_rows)} filas)")
 
 
 if __name__ == "__main__":
