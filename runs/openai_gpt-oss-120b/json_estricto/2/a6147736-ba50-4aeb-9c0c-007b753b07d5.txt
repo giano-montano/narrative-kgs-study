@@ -1,0 +1,5 @@
+{"triples": [
+  {"event": "lit", "rel": "patient", "arg": "walls", "arg_type": "Object"},
+  {"event": "lit", "rel": "next", "arg": "go", "arg_type": "Event"},
+  {"event": "go", "rel": "location", "arg": "underground", "arg_type": "Location"}
+]}

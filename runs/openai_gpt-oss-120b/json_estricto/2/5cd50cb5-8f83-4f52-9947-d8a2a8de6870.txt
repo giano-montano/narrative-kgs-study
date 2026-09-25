@@ -1,0 +1,27 @@
+{
+  "triples": [
+    {"event": "adopting", "rel": "agent", "arg": "Jim", "arg_type": "Character"},
+    {"event": "adopting", "rel": "agent", "arg": "Marcella", "arg_type": "Character"},
+    {"event": "adopting", "rel": "patient", "arg": "child", "arg_type": "Character"},
+    {"event": "adopting", "rel": "next", "arg": "stood", "arg_type": "Event"},
+    
+    {"event": "stood", "rel": "agent", "arg": "Jim", "arg_type": "Character"},
+    {"event": "stood", "rel": "agent", "arg": "Marcella", "arg_type": "Character"},
+    {"event": "stood", "rel": "location", "arg": "porch", "arg_type": "Location"},
+    {"event": "stood", "rel": "next", "arg": "waiting", "arg_type": "Event"},
+    
+    {"event": "waiting", "rel": "agent", "arg": "Jim", "arg_type": "Character"},
+    {"event": "waiting", "rel": "agent", "arg": "Marcella", "arg_type": "Character"},
+    {"event": "waiting", "rel": "next", "arg": "pulled", "arg_type": "Event"},
+    
+    {"event": "pulled", "rel": "agent", "arg": "car", "arg_type": "Object"},
+    {"event": "pulled", "rel": "location", "arg": "driveway", "arg_type": "Location"},
+    {"event": "pulled", "rel": "next", "arg": "hopped", "arg_type": "Event"},
+    
+    {"event": "hopped", "rel": "agent", "arg": "boy", "arg_type": "Character"},
+    {"event": "hopped", "rel": "location", "arg": "car", "arg_type": "Object"},
+    {"event": "hopped", "rel": "next", "arg": "arrived", "arg_type": "Event"},
+    
+    {"event": "arrived", "rel": "agent", "arg": "boy", "arg_type": "Character"}
+  ]
+}

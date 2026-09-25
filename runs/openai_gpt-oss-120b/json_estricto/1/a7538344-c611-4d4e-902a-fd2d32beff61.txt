@@ -1,0 +1,94 @@
+{
+  "triples": [
+    {
+      "event": "got",
+      "rel": "agent",
+      "arg": "Steve",
+      "arg_type": "Character"
+    },
+    {
+      "event": "got",
+      "rel": "patient",
+      "arg": "sweater",
+      "arg_type": "Object"
+    },
+    {
+      "event": "got",
+      "rel": "next",
+      "arg": "like",
+      "arg_type": "Event"
+    },
+    {
+      "event": "like",
+      "rel": "agent",
+      "arg": "Steve",
+      "arg_type": "Character"
+    },
+    {
+      "event": "like",
+      "rel": "patient",
+      "arg": "sweater",
+      "arg_type": "Object"
+    },
+    {
+      "event": "like",
+      "rel": "next",
+      "arg": "brought",
+      "arg_type": "Event"
+    },
+    {
+      "event": "brought",
+      "rel": "agent",
+      "arg": "Steve",
+      "arg_type": "Character"
+    },
+    {
+      "event": "brought",
+      "rel": "patient",
+      "arg": "sweater",
+      "arg_type": "Object"
+    },
+    {
+      "event": "brought",
+      "rel": "location",
+      "arg": "donation center",
+      "arg_type": "Location"
+    },
+    {
+      "event": "brought",
+      "rel": "next",
+      "arg": "donated",
+      "arg_type": "Event"
+    },
+    {
+      "event": "donated",
+      "rel": "agent",
+      "arg": "Steve",
+      "arg_type": "Character"
+    },
+    {
+      "event": "donated",
+      "rel": "patient",
+      "arg": "sweater",
+      "arg_type": "Object"
+    },
+    {
+      "event": "donated",
+      "rel": "next",
+      "arg": "returned",
+      "arg_type": "Event"
+    },
+    {
+      "event": "returned",
+      "rel": "agent",
+      "arg": "Steve",
+      "arg_type": "Character"
+    },
+    {
+      "event": "returned",
+      "rel": "location",
+      "arg": "house",
+      "arg_type": "Location"
+    }
+  ]
+}

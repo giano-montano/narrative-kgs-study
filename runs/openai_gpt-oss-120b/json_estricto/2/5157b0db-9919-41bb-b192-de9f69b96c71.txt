@@ -1,0 +1,64 @@
+{
+  "triples": [
+    {
+      "event": "tried",
+      "rel": "agent",
+      "arg": "Lisa",
+      "arg_type": "Character"
+    },
+    {
+      "event": "tried",
+      "rel": "patient",
+      "arg": "archery",
+      "arg_type": "Object"
+    },
+    {
+      "event": "tried",
+      "rel": "next",
+      "arg": "decided",
+      "arg_type": "Event"
+    },
+    {
+      "event": "decided",
+      "rel": "agent",
+      "arg": "Lisa",
+      "arg_type": "Character"
+    },
+    {
+      "event": "decided",
+      "rel": "next",
+      "arg": "take",
+      "arg_type": "Event"
+    },
+    {
+      "event": "take",
+      "rel": "agent",
+      "arg": "Lisa",
+      "arg_type": "Character"
+    },
+    {
+      "event": "take",
+      "rel": "patient",
+      "arg": "whack",
+      "arg_type": "Object"
+    },
+    {
+      "event": "take",
+      "rel": "next",
+      "arg": "scored",
+      "arg_type": "Event"
+    },
+    {
+      "event": "scored",
+      "rel": "agent",
+      "arg": "Lisa",
+      "arg_type": "Character"
+    },
+    {
+      "event": "scored",
+      "rel": "patient",
+      "arg": "bullseye",
+      "arg_type": "Object"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{"triples": [
+  {"event": "working", "rel": "agent", "arg": "Keith", "arg_type": "Character"},
+  {"event": "working", "rel": "location", "arg": "shop", "arg_type": "Location"},
+  {"event": "working", "rel": "next", "arg": "given", "arg_type": "Event"},
+  {"event": "given", "rel": "agent", "arg": "Keith", "arg_type": "Character"},
+  {"event": "given", "rel": "patient", "arg": "quote", "arg_type": "Object"},
+  {"event": "given", "rel": "next", "arg": "kept", "arg_type": "Event"},
+  {"event": "kept", "rel": "agent", "arg": "Keith", "arg_type": "Character"},
+  {"event": "kept", "rel": "patient", "arg": "difference", "arg_type": "Object"},
+  {"event": "kept", "rel": "next", "arg": "found", "arg_type": "Event"},
+  {"event": "found", "rel": "agent", "arg": "boss", "arg_type": "Character"},
+  {"event": "found", "rel": "next", "arg": "lost", "arg_type": "Event"},
+  {"event": "lost", "rel": "agent", "arg": "Keith", "arg_type": "Character"},
+  {"event": "lost", "rel": "patient", "arg": "job", "arg_type": "Object"}
+]}

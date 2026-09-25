@@ -1,0 +1,5 @@
+lit | agent | walls [Object]
+lit | next | go [Event]
+go | agent | You [Character]
+go | location | underground [Location]
+go | location | terminals [Location]

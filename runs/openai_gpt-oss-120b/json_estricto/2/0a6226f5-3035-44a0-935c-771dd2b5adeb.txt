@@ -1,0 +1,100 @@
+{
+  "triples": [
+    {
+      "event": "bought",
+      "rel": "agent",
+      "arg": "wife",
+      "arg_type": "Character"
+    },
+    {
+      "event": "bought",
+      "rel": "patient",
+      "arg": "fish",
+      "arg_type": "Object"
+    },
+    {
+      "event": "bought",
+      "rel": "next",
+      "arg": "picked",
+      "arg_type": "Event"
+    },
+    {
+      "event": "picked",
+      "rel": "agent",
+      "arg": "wife",
+      "arg_type": "Character"
+    },
+    {
+      "event": "picked",
+      "rel": "patient",
+      "arg": "bottle",
+      "arg_type": "Object"
+    },
+    {
+      "event": "picked",
+      "rel": "next",
+      "arg": "got",
+      "arg_type": "Event"
+    },
+    {
+      "event": "got",
+      "rel": "agent",
+      "arg": "wife",
+      "arg_type": "Character"
+    },
+    {
+      "event": "got",
+      "rel": "location",
+      "arg": "home",
+      "arg_type": "Location"
+    },
+    {
+      "event": "got",
+      "rel": "next",
+      "arg": "checked",
+      "arg_type": "Event"
+    },
+    {
+      "event": "checked",
+      "rel": "agent",
+      "arg": "wife",
+      "arg_type": "Character"
+    },
+    {
+      "event": "checked",
+      "rel": "patient",
+      "arg": "sauce",
+      "arg_type": "Object"
+    },
+    {
+      "event": "checked",
+      "rel": "next",
+      "arg": "found",
+      "arg_type": "Event"
+    },
+    {
+      "event": "found",
+      "rel": "agent",
+      "arg": "wife",
+      "arg_type": "Character"
+    },
+    {
+      "event": "found",
+      "rel": "patient",
+      "arg": "sauce",
+      "arg_type": "Object"
+    },
+    {
+      "event": "found",
+      "rel": "next",
+      "arg": "made",
+      "arg_type": "Event"
+    },
+    {
+      "event": "made",
+      "rel": "agent",
+      "arg": "we",
+      "arg_type": "Character"
+    }
+  ]
+}
