@@ -1,0 +1,52 @@
+{
+  "triples": [
+    {
+      "event": "bought",
+      "rel": "agent",
+      "arg": "Franny",
+      "arg_type": "Character"
+    },
+    {
+      "event": "bought",
+      "rel": "patient",
+      "arg": "blanket",
+      "arg_type": "Object"
+    },
+    {
+      "event": "bought",
+      "rel": "next",
+      "arg": "snuggled",
+      "arg_type": "Event"
+    },
+    {
+      "event": "snuggled",
+      "rel": "agent",
+      "arg": "Franny",
+      "arg_type": "Character"
+    },
+    {
+      "event": "snuggled",
+      "rel": "location",
+      "arg": "blanket",
+      "arg_type": "Object"
+    },
+    {
+      "event": "snuggled",
+      "rel": "next",
+      "arg": "watched",
+      "arg_type": "Event"
+    },
+    {
+      "event": "watched",
+      "rel": "agent",
+      "arg": "Franny",
+      "arg_type": "Character"
+    },
+    {
+      "event": "watched",
+      "rel": "patient",
+      "arg": "movie",
+      "arg_type": "Object"
+    }
+  ]
+}

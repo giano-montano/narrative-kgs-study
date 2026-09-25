@@ -1,0 +1,8 @@
+traveled | agent | Kyle [Character]
+traveled | location | beach [Location]
+traveled | next | took [Event]
+took | agent | Kyle [Character]
+took | patient | surfboard [Object]
+took | location | truck [Location]
+took | next | surfed [Event]
+surfaced | agent | Kyle [Character]

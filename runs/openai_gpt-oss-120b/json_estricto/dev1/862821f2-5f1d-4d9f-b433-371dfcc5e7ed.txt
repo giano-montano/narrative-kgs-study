@@ -1,0 +1,22 @@
+{
+  "triples": [
+    {"event": "loves", "rel": "agent", "arg": "Joana", "arg_type": "Character"},
+    {"event": "loves", "rel": "patient", "arg": "shoes", "arg_type": "Object"},
+    {"event": "loves", "rel": "next", "arg": "buying", "arg_type": "Event"},
+    {"event": "buying", "rel": "agent", "arg": "Joana", "arg_type": "Character"},
+    {"event": "buying", "rel": "patient", "arg": "shoes", "arg_type": "Object"},
+    {"event": "buying", "rel": "next", "arg": "counted", "arg_type": "Event"},
+    {"event": "counted", "rel": "agent", "arg": "Joana", "arg_type": "Character"},
+    {"event": "counted", "rel": "patient", "arg": "shoes", "arg_type": "Object"},
+    {"event": "counted", "rel": "next", "arg": "got", "arg_type": "Event"},
+    {"event": "got", "rel": "agent", "arg": "mother", "arg_type": "Character"},
+    {"event": "got", "rel": "next", "arg": "decided", "arg_type": "Event"},
+    {"event": "decided", "rel": "agent", "arg": "Joana", "arg_type": "Character"},
+    {"event": "decided", "rel": "next", "arg": "sell", "arg_type": "Event"},
+    {"event": "sell", "rel": "agent", "arg": "Joana", "arg_type": "Character"},
+    {"event": "sell", "rel": "patient", "arg": "shoes", "arg_type": "Object"},
+    {"event": "sell", "rel": "next", "arg": "realized", "arg_type": "Event"},
+    {"event": "realized", "rel": "agent", "arg": "Joana", "arg_type": "Character"},
+    {"event": "realized", "rel": "patient", "arg": "shoes", "arg_type": "Object"}
+  ]
+}

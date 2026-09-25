@@ -1,0 +1,70 @@
+{
+  "triples": [
+    {
+      "event": "stayed",
+      "rel": "agent",
+      "arg": "Terry",
+      "arg_type": "Character"
+    },
+    {
+      "event": "stayed",
+      "rel": "location",
+      "arg": "side",
+      "arg_type": "Object"
+    },
+    {
+      "event": "stayed",
+      "rel": "next",
+      "arg": "prayed",
+      "arg_type": "Event"
+    },
+    {
+      "event": "prayed",
+      "rel": "agent",
+      "arg": "Terry",
+      "arg_type": "Character"
+    },
+    {
+      "event": "prayed",
+      "rel": "next",
+      "arg": "knew",
+      "arg_type": "Event"
+    },
+    {
+      "event": "knew",
+      "rel": "agent",
+      "arg": "Terry",
+      "arg_type": "Character"
+    },
+    {
+      "event": "knew",
+      "rel": "next",
+      "arg": "watched",
+      "arg_type": "Event"
+    },
+    {
+      "event": "watched",
+      "rel": "agent",
+      "arg": "Terry",
+      "arg_type": "Character"
+    },
+    {
+      "event": "watched",
+      "rel": "patient",
+      "arg": "eyes",
+      "arg_type": "Object"
+    },
+    {
+      "event": "watched",
+      "rel": "next",
+      "arg": "close",
+      "arg_type": "Event"
+    },
+    {
+      "event": "close",
+      "rel": "patient",
+      "arg": "eyes",
+      "arg_type": "Object"
+    }
+  ]
+}
