@@ -103,6 +103,10 @@ def prf(pred, gold):
     return tp, p, r, f1
 
 
+def jaccard(a, b):
+    return len(a & b) / len(a | b) if a or b else 1.0
+
+
 def score_cell(outputs, gold, log, model, condition, run):
     # outputs: {story_id: lista de Triple o None}; P/R/F1 micro
     stories = set(outputs)
@@ -170,6 +174,33 @@ def main():
     METRICS.parent.mkdir(exist_ok=True)
     pd.DataFrame(rows).to_csv(METRICS, index=False, float_format="%.4f")
     print(f"escrito {METRICS} ({len(rows)} filas) con gold {args.gold}")
+
+    stability_rows = []
+    groups_mc = set((m, c) for m, c, r in cells)
+    for model, condition in sorted(groups_mc):
+        if (model, condition, "1") in cells and (model, condition, "2") in cells:
+            out1 = cells[(model, condition, "1")]
+            out2 = cells[(model, condition, "2")]
+            common_stories = sorted(set(out1) & set(out2))
+            if not common_stories:
+                continue
+            
+            jaccards = []
+            rels = GROUPS["all_no_next"]
+            for sid in common_stories:
+                k1 = {key(sid, t.event, t.rel, t.arg) for t in (out1[sid] or [])}
+                k1 = {k for k in k1 if k[2] in rels}
+                k2 = {key(sid, t.event, t.rel, t.arg) for t in (out2[sid] or [])}
+                k2 = {k for k in k2 if k[2] in rels}
+                jaccards.append(jaccard(k1, k2))
+            
+            mean_j = sum(jaccards) / len(jaccards)
+            stability_rows.append({"model": model, "condition": condition, 
+                                   "n_stories": len(jaccards), "mean_jaccard": mean_j})
+    if stability_rows:
+        stab_path = ROOT / "results" / "stability.csv"
+        pd.DataFrame(stability_rows).to_csv(stab_path, index=False, float_format="%.4f")
+        print(f"escrito {stab_path} ({len(stability_rows)} filas)")
 
 
 if __name__ == "__main__":
