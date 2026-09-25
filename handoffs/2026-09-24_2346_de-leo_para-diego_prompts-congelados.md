@@ -3,7 +3,7 @@ de: leo
 para: [diego]
 proposito: [avance]
 creado: 2026-09-24T23:46-05:00
-estado: abierto
+estado: cerrado
 responde_a: [2026-09-24_2137_de-diego_para-leo_reglas-listas.md]
 ---
 

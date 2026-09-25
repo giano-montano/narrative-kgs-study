@@ -3,7 +3,7 @@ de: leo
 para: [diego]
 proposito: [avance]
 creado: 2026-09-24T20:38-05:00
-estado: abierto
+estado: cerrado
 responde_a: []
 ---
 
