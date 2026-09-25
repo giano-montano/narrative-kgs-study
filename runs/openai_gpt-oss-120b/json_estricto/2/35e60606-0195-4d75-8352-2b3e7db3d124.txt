@@ -1,0 +1,100 @@
+{
+  "triples": [
+    {
+      "event": "loved",
+      "rel": "agent",
+      "arg": "Julia",
+      "arg_type": "Character"
+    },
+    {
+      "event": "loved",
+      "rel": "patient",
+      "arg": "cooking",
+      "arg_type": "Object"
+    },
+    {
+      "event": "loved",
+      "rel": "next",
+      "arg": "hired",
+      "arg_type": "Event"
+    },
+    {
+      "event": "hired",
+      "rel": "agent",
+      "arg": "restaurant",
+      "arg_type": "Character"
+    },
+    {
+      "event": "hired",
+      "rel": "patient",
+      "arg": "Julia",
+      "arg_type": "Character"
+    },
+    {
+      "event": "hired",
+      "rel": "next",
+      "arg": "worked",
+      "arg_type": "Event"
+    },
+    {
+      "event": "worked",
+      "rel": "agent",
+      "arg": "Julia",
+      "arg_type": "Character"
+    },
+    {
+      "event": "worked",
+      "rel": "next",
+      "arg": "create",
+      "arg_type": "Event"
+    },
+    {
+      "event": "create",
+      "rel": "agent",
+      "arg": "Julia",
+      "arg_type": "Character"
+    },
+    {
+      "event": "create",
+      "rel": "patient",
+      "arg": "menu",
+      "arg_type": "Object"
+    },
+    {
+      "event": "create",
+      "rel": "next",
+      "arg": "loved",
+      "arg_type": "Event"
+    },
+    {
+      "event": "loved",
+      "rel": "agent",
+      "arg": "people",
+      "arg_type": "Character"
+    },
+    {
+      "event": "loved",
+      "rel": "patient",
+      "arg": "food",
+      "arg_type": "Object"
+    },
+    {
+      "event": "loved",
+      "rel": "next",
+      "arg": "became",
+      "arg_type": "Event"
+    },
+    {
+      "event": "became",
+      "rel": "agent",
+      "arg": "Julia",
+      "arg_type": "Character"
+    },
+    {
+      "event": "became",
+      "rel": "patient",
+      "arg": "cook",
+      "arg_type": "Object"
+    }
+  ]
+}

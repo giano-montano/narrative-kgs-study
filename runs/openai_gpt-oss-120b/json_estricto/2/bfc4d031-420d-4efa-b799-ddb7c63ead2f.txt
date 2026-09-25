@@ -1,0 +1,18 @@
+{
+  "triples": [
+    {"event": "made", "rel": "agent", "arg": "Janet", "arg_type": "Character"},
+    {"event": "made", "rel": "patient", "arg": "wish", "arg_type": "Object"},
+    {"event": "made", "rel": "location", "arg": "star", "arg_type": "Location"},
+    {"event": "made", "rel": "next", "arg": "wished", "arg_type": "Event"},
+    {"event": "wished", "rel": "agent", "arg": "Janet", "arg_type": "Character"},
+    {"event": "wished", "rel": "patient", "arg": "tickets", "arg_type": "Object"},
+    {"event": "wished", "rel": "next", "arg": "came", "arg_type": "Event"},
+    {"event": "came", "rel": "agent", "arg": "wish", "arg_type": "Object"},
+    {"event": "came", "rel": "next", "arg": "win", "arg_type": "Event"},
+    {"event": "win", "rel": "agent", "arg": "grandparents", "arg_type": "Character"},
+    {"event": "win", "rel": "patient", "arg": "tickets", "arg_type": "Object"},
+    {"event": "win", "rel": "next", "arg": "attended", "arg_type": "Event"},
+    {"event": "attended", "rel": "agent", "arg": "Janet", "arg_type": "Character"},
+    {"event": "attended", "rel": "patient", "arg": "show", "arg_type": "Object"}
+  ]
+}

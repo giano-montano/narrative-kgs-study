@@ -1,0 +1,7 @@
+model,condition,n_stories,mean_jaccard
+openai_gpt-oss-120b,json_estricto,30,0.7700
+openai_gpt-oss-120b,json_objeto,30,0.7743
+openai_gpt-oss-120b,texto,30,0.7531
+openai_gpt-oss-20b,json_estricto,30,0.5492
+openai_gpt-oss-20b,json_objeto,30,0.5918
+openai_gpt-oss-20b,texto,30,0.6068

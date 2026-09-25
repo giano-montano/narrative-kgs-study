@@ -1,0 +1,64 @@
+{
+  "triples": [
+    {
+      "event": "spent",
+      "rel": "agent",
+      "arg": "Bryan",
+      "arg_type": "Character"
+    },
+    {
+      "event": "spent",
+      "rel": "patient",
+      "arg": "summer",
+      "arg_type": "Object"
+    },
+    {
+      "event": "spent",
+      "rel": "next",
+      "arg": "starting",
+      "arg_type": "Event"
+    },
+    {
+      "event": "starting",
+      "rel": "agent",
+      "arg": "school",
+      "arg_type": "Location"
+    },
+    {
+      "event": "starting",
+      "rel": "next",
+      "arg": "start",
+      "arg_type": "Event"
+    },
+    {
+      "event": "start",
+      "rel": "agent",
+      "arg": "Bryan",
+      "arg_type": "Character"
+    },
+    {
+      "event": "start",
+      "rel": "next",
+      "arg": "started",
+      "arg_type": "Event"
+    },
+    {
+      "event": "started",
+      "rel": "agent",
+      "arg": "Bryan",
+      "arg_type": "Character"
+    },
+    {
+      "event": "started",
+      "rel": "next",
+      "arg": "trying",
+      "arg_type": "Event"
+    },
+    {
+      "event": "trying",
+      "rel": "agent",
+      "arg": "Bryan",
+      "arg_type": "Character"
+    }
+  ]
+}

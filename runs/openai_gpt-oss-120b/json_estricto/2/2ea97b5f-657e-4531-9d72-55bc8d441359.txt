@@ -1,0 +1,106 @@
+{
+  "triples": [
+    {
+      "event": "had",
+      "rel": "agent",
+      "arg": "Stephen",
+      "arg_type": "Character"
+    },
+    {
+      "event": "had",
+      "rel": "patient",
+      "arg": "table",
+      "arg_type": "Object"
+    },
+    {
+      "event": "had",
+      "rel": "next",
+      "arg": "use",
+      "arg_type": "Event"
+    },
+    {
+      "event": "use",
+      "rel": "agent",
+      "arg": "Stephen",
+      "arg_type": "Character"
+    },
+    {
+      "event": "use",
+      "rel": "patient",
+      "arg": "table",
+      "arg_type": "Object"
+    },
+    {
+      "event": "use",
+      "rel": "next",
+      "arg": "broke",
+      "arg_type": "Event"
+    },
+    {
+      "event": "broke",
+      "rel": "agent",
+      "arg": "table",
+      "arg_type": "Object"
+    },
+    {
+      "event": "broke",
+      "rel": "patient",
+      "arg": "leg",
+      "arg_type": "Object"
+    },
+    {
+      "event": "broke",
+      "rel": "next",
+      "arg": "rush",
+      "arg_type": "Event"
+    },
+    {
+      "event": "rush",
+      "rel": "agent",
+      "arg": "Stephen",
+      "arg_type": "Character"
+    },
+    {
+      "event": "rush",
+      "rel": "location",
+      "arg": "store",
+      "arg_type": "Location"
+    },
+    {
+      "event": "rush",
+      "rel": "next",
+      "arg": "get",
+      "arg_type": "Event"
+    },
+    {
+      "event": "get",
+      "rel": "agent",
+      "arg": "Stephen",
+      "arg_type": "Character"
+    },
+    {
+      "event": "get",
+      "rel": "patient",
+      "arg": "table",
+      "arg_type": "Object"
+    },
+    {
+      "event": "get",
+      "rel": "next",
+      "arg": "eat",
+      "arg_type": "Event"
+    },
+    {
+      "event": "eat",
+      "rel": "agent",
+      "arg": "Stephen",
+      "arg_type": "Character"
+    },
+    {
+      "event": "eat",
+      "rel": "patient",
+      "arg": "table",
+      "arg_type": "Object"
+    }
+  ]
+}

@@ -491,7 +491,7 @@ bfc4d031-420d-4efa-b799-ddb7c63ead2f,win,next,attended,Event
 954e44f6-8559-4324-82f6-671c51781cc9,fed,patient,chicken,Object
 62f34c7e-3703-4c7a-8a16-d2eca7326c48,sleeping,agent,Bryan,Character
 62f34c7e-3703-4c7a-8a16-d2eca7326c48,sleeping,next,starting,Event
-"62f34c7e-3703-4c7a-8a16-d2eca7326c48,get,agent,Bryan,Character
+62f34c7e-3703-4c7a-8a16-d2eca7326c48,get,agent,Bryan,Character
 35e60606-0195-4d75-8352-2b3e7db3d124,loved,agent,Julia,Character
 35e60606-0195-4d75-8352-2b3e7db3d124,loved,patient,cooking,Object
 35e60606-0195-4d75-8352-2b3e7db3d124,loved,agent,people,Character
@@ -503,4 +503,4 @@ bfc4d031-420d-4efa-b799-ddb7c63ead2f,win,next,attended,Event
 35e60606-0195-4d75-8352-2b3e7db3d124,worked,agent,Julia,Character
 35e60606-0195-4d75-8352-2b3e7db3d124,worked,next,create,Event
 35e60606-0195-4d75-8352-2b3e7db3d124,create,agent,Julia,Character
-35e60606-0195-4d75-8352-2b3e7db3d124,create,patient,menu,Object"
+35e60606-0195-4d75-8352-2b3e7db3d124,create,patient,menu,Object

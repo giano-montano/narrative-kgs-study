@@ -1,0 +1,94 @@
+{
+  "triples": [
+    {
+      "event": "going",
+      "rel": "agent",
+      "arg": "Bobby",
+      "arg_type": "Character"
+    },
+    {
+      "event": "going",
+      "rel": "location",
+      "arg": "lake",
+      "arg_type": "Location"
+    },
+    {
+      "event": "going",
+      "rel": "next",
+      "arg": "swim",
+      "arg_type": "Event"
+    },
+    {
+      "event": "swim",
+      "rel": "agent",
+      "arg": "Bobby",
+      "arg_type": "Character"
+    },
+    {
+      "event": "swim",
+      "rel": "next",
+      "arg": "packed",
+      "arg_type": "Event"
+    },
+    {
+      "event": "packed",
+      "rel": "agent",
+      "arg": "mother",
+      "arg_type": "Character"
+    },
+    {
+      "event": "packed",
+      "rel": "patient",
+      "arg": "sunscreen",
+      "arg_type": "Object"
+    },
+    {
+      "event": "packed",
+      "rel": "next",
+      "arg": "use",
+      "arg_type": "Event"
+    },
+    {
+      "event": "use",
+      "rel": "agent",
+      "arg": "friends",
+      "arg_type": "Character"
+    },
+    {
+      "event": "use",
+      "rel": "patient",
+      "arg": "sunscreen",
+      "arg_type": "Object"
+    },
+    {
+      "event": "use",
+      "rel": "next",
+      "arg": "want",
+      "arg_type": "Event"
+    },
+    {
+      "event": "want",
+      "rel": "agent",
+      "arg": "Bobby",
+      "arg_type": "Character"
+    },
+    {
+      "event": "want",
+      "rel": "next",
+      "arg": "got",
+      "arg_type": "Event"
+    },
+    {
+      "event": "got",
+      "rel": "agent",
+      "arg": "Bobby",
+      "arg_type": "Character"
+    },
+    {
+      "event": "got",
+      "rel": "patient",
+      "arg": "sunburn",
+      "arg_type": "Object"
+    }
+  ]
+}
