@@ -24,7 +24,6 @@ c152ae65-0ee8-4695-8f5c-ca536f9212cf,save,patient,Kyle,Character
 c7b2536a-a3ee-48c0-af1d-081d76d67872,bought,agent,Franny,Character
 c7b2536a-a3ee-48c0-af1d-081d76d67872,bought,patient,blanket,Object
 c7b2536a-a3ee-48c0-af1d-081d76d67872,bought,next,keep,Event
-c7b2536a-a3ee-48c0-af1d-081d76d67872,keep,agent,blanket,Object
 c7b2536a-a3ee-48c0-af1d-081d76d67872,keep,patient,Franny,Character
 c7b2536a-a3ee-48c0-af1d-081d76d67872,keep,next,snuggled,Event
 c7b2536a-a3ee-48c0-af1d-081d76d67872,snuggled,agent,Franny,Character
@@ -41,6 +40,7 @@ c7b2536a-a3ee-48c0-af1d-081d76d67872,watched,patient,movie,Object
 86983498-bc58-4d37-a2de-9297ee03f03d,bashed,patient,headlights,Object
 86983498-bc58-4d37-a2de-9297ee03f03d,bashed,next,continued,Event
 86983498-bc58-4d37-a2de-9297ee03f03d,continued,agent,Carrie,Character
+86983498-bc58-4d37-a2de-9297ee03f03d,continued,patient,windshield,Object
 86983498-bc58-4d37-a2de-9297ee03f03d,continued,patient,body,Object
 86983498-bc58-4d37-a2de-9297ee03f03d,continued,next,finished,Event
 86983498-bc58-4d37-a2de-9297ee03f03d,finished,agent,Carrie,Character
@@ -61,6 +61,7 @@ c7b2536a-a3ee-48c0-af1d-081d76d67872,watched,patient,movie,Object
 862821f2-5f1d-4d9f-b433-371dfcc5e7ed,got,agent,mother,Character
 862821f2-5f1d-4d9f-b433-371dfcc5e7ed,got,next,lack,Event
 862821f2-5f1d-4d9f-b433-371dfcc5e7ed,lack,agent,Joana,Character
+862821f2-5f1d-4d9f-b433-371dfcc5e7ed,lack,agent,mother,Character
 862821f2-5f1d-4d9f-b433-371dfcc5e7ed,lack,patient,money,Object
 862821f2-5f1d-4d9f-b433-371dfcc5e7ed,lack,next,decided,Event
 862821f2-5f1d-4d9f-b433-371dfcc5e7ed,decided,agent,Joana,Character
@@ -84,7 +85,7 @@ d995bb60-e6dc-49f2-965e-66f80ab2b94e,get,agent,grandparent,Character
 d995bb60-e6dc-49f2-965e-66f80ab2b94e,get,next,knew,Event
 d995bb60-e6dc-49f2-965e-66f80ab2b94e,knew,agent,Terry,Character
 d995bb60-e6dc-49f2-965e-66f80ab2b94e,knew,next,pass,Event
-d995bb60-e6dc-49f2-965e-66f80ab2b94e,pass,agent,grandpa,Character
+d995bb60-e6dc-49f2-965e-66f80ab2b94e,pass,agent,grandparent,Character
 d995bb60-e6dc-49f2-965e-66f80ab2b94e,pass,next,holding,Event
 d995bb60-e6dc-49f2-965e-66f80ab2b94e,holding,agent,Terry,Character
 d995bb60-e6dc-49f2-965e-66f80ab2b94e,holding,patient,hand,Object
