@@ -87,15 +87,27 @@ Las métricas son **micro**: se suman los aciertos de todas las historias y se d
 
 Se escribe una fila por modelo × condición × corrida × grupo, donde los grupos son `all_no_next` (la métrica principal, que excluye `next`) y una por relación. Van también `tp`, `n_pred` y `n_gold` para poder revisar a mano de dónde salió cada número.
 
+### 4. Otras métricas
+
+Además de la precisión, recall y F1, `score.py` genera:
+- **Tipos correctos:** Porcentaje de aciertos donde también coincidió el `arg_type` (guardado en `metrics.csv`).
+- **Tokens:** Promedio de `prompt_tokens` y `completion_tokens` de las llamadas exitosas, sacados de `log.csv` (guardado en `metrics.csv`).
+- **Estabilidad (Jaccard):** Qué tanto coinciden (intersección sobre unión) las tripletas de la corrida 1 con las de la corrida 2 de la misma historia. Promediado por condición (guardado en `stability.csv`).
+- **Bootstrap pareado:** Para saber si la diferencia de F1 entre dos condiciones es suerte o es real, se mide la diferencia historia por historia y se remuestrea 1000 veces. Si el intervalo del 95 % no toca el cero, la diferencia es estadísticamente significativa (guardado en `bootstrap.csv`).
+
 ## Cómo correrlo
 
 ```bash
-# una condición, una corrida
-python run.py --model openai/gpt-oss-20b --condition texto --run 1 --stories data/stories_example.csv
+# una condición, una corrida (limitada a un rango de un split)
+python run.py --model openai/gpt-oss-20b --condition texto --run 1 --split test --start 0 --end 15 --stories data/stories_example.csv
 
 # puntuar todo lo que haya en runs/
 python score.py --gold data/gold_example.csv
 ```
+
+Nuevos flags para controlar la ejecución:
+- `--split`: Requerido (`dev` o `test`). Valida que corresponda con el nombre de la corrida (ej. `dev1` va con `dev`, `1` va con `test`).
+- `--start` y `--end`: Opcionales. Permiten correr solo un rango de filas dentro del split (ej. `--start 0 --end 15` para las primeras 15), excluyendo el `end` como en Python.
 
 `run.py` lee la key de `GROQ_API_KEY`. `score.py` no necesita key: recorre `runs/` entero y puntúa lo que encuentre.
 

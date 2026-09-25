@@ -103,7 +103,7 @@ Métricas por modelo × condición:
 
 ```
 docs/PROYECTO.md       este documento
-CLAUDE.md              importa este documento + convenciones de código
+AGENTS.md              importa este documento + convenciones de código y handoffs
 data/stories.csv       story_id, split, s1..s5                  (Diego)
 data/gold.csv          story_id, event, rel, arg, arg_type      (Diego)
 prompts/instructions.txt   reglas de la sección 4, en inglés
@@ -113,9 +113,12 @@ schema.py              modelos Pydantic Triple y Graph
 run.py                 llama al modelo y guarda la respuesta cruda
 score.py               parsea, normaliza, compara y calcula métricas
 runs/<modelo>/<condicion>/<corrida>/<story_id>.txt   respuesta cruda
-runs/log.csv           timestamp, model, condition, run, story_id,
+runs/log.csv           timestamp, model, condition, run (dev1-3, 1-2), story_id,
                        prompt_tokens, completion_tokens, latency_s, error
-results/metrics.csv
+results/metrics.csv    precisión, recall, F1, tokens, % tipos, % válidas
+results/stability.csv  estabilidad Jaccard entre corridas 1 y 2
+results/bootstrap.csv  IC 95 % por bootstrap pareado
+handoffs/              mensajes de coordinación entre el equipo
 ```
 
 Dependencias: `groq`, `pydantic`, `pandas`, `numpy`. No se agrega ninguna otra sin discutirlo. La API key se lee de la variable de entorno `GROQ_API_KEY`.
