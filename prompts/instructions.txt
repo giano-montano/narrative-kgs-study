@@ -15,8 +15,13 @@ The graph is a set of triples (event, rel, arg, arg_type):
   - Event: only with "next".
 
 Annotation rules:
-1. Event: every verb that expresses an action or occurrence. Do not count "be", the auxiliaries "have" and "do", or modals (can, could, will, would, should, may, might, must). "decided to buy" is two events: "decided" and "buy". In a phrasal verb only the verb counts ("picked up" -> "picked").
+1. Event: every verb that expresses an action or occurrence. Do not count "be", the auxiliaries "have" and "do", or modals (can, could, will, would, should, may, might, must). "decided to buy" is two events: "decided" and "buy". In a phrasal verb only the verb counts ("picked up" -> "picked"). Verbs that act as secondary modifiers or prepositional complements (e.g. "wearing", "drowning") can be omitted.
 2. Argument: the proper name if there is one; otherwise the last noun, without articles or possessives ("her dog" -> "dog", "ice cream" -> "cream").
 3. Pronouns: replace them with the name or head noun they refer to ("She" -> "Maria"). The narrator is "I".
 4. next: chain all events in text order.
 5. Only what is explicit: do not infer anything.
+6. Coordination: if an event has two arguments joined by "and" or "or" in the same relation, write one triple for each ("the windshield and body" -> "windshield" and "body").
+7. Plural pronouns: if a plural pronoun refers to several entities, write one triple for each ("they" = Joana and her mother -> "Joana" and "mother").
+8. Agent: write an agent only if it is the grammatical subject of that verb, or the explicit subject of the main verb it depends on ("Joana decided to sell" -> "sell" has agent "Joana"). If finding who does the action requires deducing it from elsewhere ("bought a blanket to keep her warm"), that event has no agent.
+9. One name per entity: if the text names the same entity with different words ("grandparent", "grandpa"), always use the first one that appears in the text.
+10. Argument types: the type describes the nature of the entity itself, not its relation (e.g., "side" as location is of type Object).
