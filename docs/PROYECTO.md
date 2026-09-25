@@ -56,11 +56,16 @@ Cada fila del gold y de la salida del modelo es una tripleta `(event, rel, arg, 
 
 Reglas de anotación, que son también el contenido del prompt:
 
-1. **Evento:** todo verbo que exprese una acción o suceso. No cuentan _be_, los auxiliares _have/do_ ni los modales (_can, could, will, would, should, may, might, must_). "decided to buy" son dos eventos: `decided` y `buy`. En un phrasal verb solo cuenta el verbo ("picked up" → `picked`).
+1. **Evento:** todo verbo que exprese una acción o suceso. No cuentan _be_, los auxiliares _have/do_ ni los modales (_can, could, will, would, should, may, might, must_). "decided to buy" son dos eventos: `decided` y `buy`. En un phrasal verb solo cuenta el verbo ("picked up" → `picked`). Los verbos que actúan como complementos o nombres secundarios (ej. "wearing", "drowning") se pueden omitir.
 2. **Argumento:** el nombre propio si existe; si no, el último sustantivo, sin artículos ni posesivos ("her dog" → `dog`, "ice cream" → `cream`).
 3. **Pronombres:** se reemplazan por el nombre o núcleo al que refieren ("She" → `Maria`). El narrador es `I`.
 4. **`next`:** encadena todos los eventos en el orden del texto.
 5. **Solo lo explícito:** no se infiere nada.
+6. **Coordinación:** si un evento tiene dos argumentos unidos por "and" u "or" en la misma relación, se escribe una fila por cada uno ("the windshield and body" → `windshield` y `body`).
+7. **Pronombres plurales:** si un pronombre plural refiere a varias entidades, se escribe una fila por cada una ("they" = Joana y su madre → `Joana` y `mother`).
+8. **Agente:** se anota solo si es el sujeto gramatical de ese verbo, o el sujeto explícito del verbo principal del que depende ("Joana decided to sell" → `sell` tiene agente `Joana`). Si para saber quién hace la acción hay que deducirlo de otra parte ("bought a blanket to keep her warm"), ese evento no lleva `agent`.
+9. **Un nombre por entidad:** si el texto nombra a la misma entidad con palabras distintas ("grandparent", "grandpa"), se usa siempre la primera que aparece en el texto.
+10. **Tipos de argumento:** el tipo de argumento describe la naturaleza del elemento y no la relación (ej. "side" como location es de tipo `Object`).
 
 Ejemplo: _"Maria lost her dog in the park. She searched every bench."_
 

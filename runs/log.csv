@@ -2,3 +2,108 @@ timestamp,model,condition,run,story_id,prompt_tokens,completion_tokens,latency_s
 2026-09-18T06:45:19+00:00,openai/gpt-oss-20b,texto,1,ex_01,539,417,1.106,
 2026-09-18T06:45:21+00:00,openai/gpt-oss-20b,json_objeto,1,ex_01,701,514,1.031,
 2026-09-18T06:45:23+00:00,openai/gpt-oss-20b,json_estricto,1,ex_01,835,533,1.063,
+2026-09-20T03:04:30+00:00,openai/gpt-oss-20b,texto,1,c152ae65-0ee8-4695-8f5c-ca536f9212cf,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:30+00:00,openai/gpt-oss-20b,texto,1,c7b2536a-a3ee-48c0-af1d-081d76d67872,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:30+00:00,openai/gpt-oss-20b,texto,1,86983498-bc58-4d37-a2de-9297ee03f03d,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:31+00:00,openai/gpt-oss-20b,texto,1,862821f2-5f1d-4d9f-b433-371dfcc5e7ed,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:31+00:00,openai/gpt-oss-20b,texto,1,d995bb60-e6dc-49f2-965e-66f80ab2b94e,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:31+00:00,openai/gpt-oss-20b,texto,1,a6147736-ba50-4aeb-9c0c-007b753b07d5,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:31+00:00,openai/gpt-oss-20b,texto,1,a7538344-c611-4d4e-902a-fd2d32beff61,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:31+00:00,openai/gpt-oss-20b,texto,1,5cd50cb5-8f83-4f52-9947-d8a2a8de6870,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:31+00:00,openai/gpt-oss-20b,texto,1,1269545a-f9a6-4584-9e36-914e374552c9,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:31+00:00,openai/gpt-oss-20b,texto,1,52dff8fd-68fb-4d21-b67f-3f56e6aee60a,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:31+00:00,openai/gpt-oss-20b,texto,1,e2f53fd9-e3e8-4e8e-bbd5-199712c7d4f0,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:32+00:00,openai/gpt-oss-20b,texto,1,0a6226f5-3035-44a0-935c-771dd2b5adeb,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:32+00:00,openai/gpt-oss-20b,texto,1,b4728237-e2bc-42c3-880c-abd27ab09283,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:32+00:00,openai/gpt-oss-20b,texto,1,5157b0db-9919-41bb-b192-de9f69b96c71,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:32+00:00,openai/gpt-oss-20b,texto,1,d3c80edd-d4ac-4a6d-ab61-7a4b77a49f8a,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:32+00:00,openai/gpt-oss-20b,texto,1,9b7315a7-054b-4dbb-833e-5fba1784698d,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:32+00:00,openai/gpt-oss-20b,texto,1,996c2aba-6c12-44cb-afef-26c1d3e9f395,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:32+00:00,openai/gpt-oss-20b,texto,1,602fd2d4-f44c-4896-b35a-b4690eaf69eb,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:32+00:00,openai/gpt-oss-20b,texto,1,d48d42a1-b327-433e-af2c-b7949d9cf05a,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:33+00:00,openai/gpt-oss-20b,texto,1,46919d93-d90d-49c1-8f95-8fd33aaa5d3a,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:33+00:00,openai/gpt-oss-20b,texto,1,2bec0512-87e6-4a9d-b6cf-e558520b7fd2,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:33+00:00,openai/gpt-oss-20b,texto,1,31bc9d81-e5b6-4856-98a7-94360fba0ad5,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:33+00:00,openai/gpt-oss-20b,texto,1,b2def845-c9fb-46b1-9dbc-2facc05f7326,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:33+00:00,openai/gpt-oss-20b,texto,1,8c76d4f2-5983-45d4-8d34-6586f8a43e4f,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:33+00:00,openai/gpt-oss-20b,texto,1,7538c89d-6400-4d11-a73f-f3b5a546848a,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:33+00:00,openai/gpt-oss-20b,texto,1,91d8facd-306c-47ba-b652-39c7cdcdca30,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:33+00:00,openai/gpt-oss-20b,texto,1,9cdbeb1f-e658-4614-abb3-1ee0493a0b93,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:34+00:00,openai/gpt-oss-20b,texto,1,d36a20c8-63f3-4816-a548-d64c64c1519d,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:34+00:00,openai/gpt-oss-20b,texto,1,bfc4d031-420d-4efa-b799-ddb7c63ead2f,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:34+00:00,openai/gpt-oss-20b,texto,1,031f9534-d1c7-49ac-8063-6f3586cc5691,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:34+00:00,openai/gpt-oss-20b,texto,1,3f5a764b-a6e7-4309-8314-1f20d16e7559,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:34+00:00,openai/gpt-oss-20b,texto,1,2ea97b5f-657e-4531-9d72-55bc8d441359,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:34+00:00,openai/gpt-oss-20b,texto,1,954e44f6-8559-4324-82f6-671c51781cc9,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:34+00:00,openai/gpt-oss-20b,texto,1,62f34c7e-3703-4c7a-8a16-d2eca7326c48,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:04:34+00:00,openai/gpt-oss-20b,texto,1,35e60606-0195-4d75-8352-2b3e7db3d124,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:37+00:00,openai/gpt-oss-20b,texto,1,c152ae65-0ee8-4695-8f5c-ca536f9212cf,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:38+00:00,openai/gpt-oss-20b,texto,1,c7b2536a-a3ee-48c0-af1d-081d76d67872,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:38+00:00,openai/gpt-oss-20b,texto,1,86983498-bc58-4d37-a2de-9297ee03f03d,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:38+00:00,openai/gpt-oss-20b,texto,1,862821f2-5f1d-4d9f-b433-371dfcc5e7ed,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:38+00:00,openai/gpt-oss-20b,texto,1,d995bb60-e6dc-49f2-965e-66f80ab2b94e,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:38+00:00,openai/gpt-oss-20b,texto,1,a6147736-ba50-4aeb-9c0c-007b753b07d5,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:38+00:00,openai/gpt-oss-20b,texto,1,a7538344-c611-4d4e-902a-fd2d32beff61,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:38+00:00,openai/gpt-oss-20b,texto,1,5cd50cb5-8f83-4f52-9947-d8a2a8de6870,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:38+00:00,openai/gpt-oss-20b,texto,1,1269545a-f9a6-4584-9e36-914e374552c9,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:38+00:00,openai/gpt-oss-20b,texto,1,52dff8fd-68fb-4d21-b67f-3f56e6aee60a,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:39+00:00,openai/gpt-oss-20b,texto,1,e2f53fd9-e3e8-4e8e-bbd5-199712c7d4f0,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:39+00:00,openai/gpt-oss-20b,texto,1,0a6226f5-3035-44a0-935c-771dd2b5adeb,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:39+00:00,openai/gpt-oss-20b,texto,1,b4728237-e2bc-42c3-880c-abd27ab09283,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:39+00:00,openai/gpt-oss-20b,texto,1,5157b0db-9919-41bb-b192-de9f69b96c71,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:39+00:00,openai/gpt-oss-20b,texto,1,d3c80edd-d4ac-4a6d-ab61-7a4b77a49f8a,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:39+00:00,openai/gpt-oss-20b,texto,1,9b7315a7-054b-4dbb-833e-5fba1784698d,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:39+00:00,openai/gpt-oss-20b,texto,1,996c2aba-6c12-44cb-afef-26c1d3e9f395,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:39+00:00,openai/gpt-oss-20b,texto,1,602fd2d4-f44c-4896-b35a-b4690eaf69eb,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:40+00:00,openai/gpt-oss-20b,texto,1,d48d42a1-b327-433e-af2c-b7949d9cf05a,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:40+00:00,openai/gpt-oss-20b,texto,1,46919d93-d90d-49c1-8f95-8fd33aaa5d3a,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:40+00:00,openai/gpt-oss-20b,texto,1,2bec0512-87e6-4a9d-b6cf-e558520b7fd2,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:40+00:00,openai/gpt-oss-20b,texto,1,31bc9d81-e5b6-4856-98a7-94360fba0ad5,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:40+00:00,openai/gpt-oss-20b,texto,1,b2def845-c9fb-46b1-9dbc-2facc05f7326,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:40+00:00,openai/gpt-oss-20b,texto,1,8c76d4f2-5983-45d4-8d34-6586f8a43e4f,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:40+00:00,openai/gpt-oss-20b,texto,1,7538c89d-6400-4d11-a73f-f3b5a546848a,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:40+00:00,openai/gpt-oss-20b,texto,1,91d8facd-306c-47ba-b652-39c7cdcdca30,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:40+00:00,openai/gpt-oss-20b,texto,1,9cdbeb1f-e658-4614-abb3-1ee0493a0b93,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:41+00:00,openai/gpt-oss-20b,texto,1,d36a20c8-63f3-4816-a548-d64c64c1519d,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:41+00:00,openai/gpt-oss-20b,texto,1,bfc4d031-420d-4efa-b799-ddb7c63ead2f,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:41+00:00,openai/gpt-oss-20b,texto,1,031f9534-d1c7-49ac-8063-6f3586cc5691,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:41+00:00,openai/gpt-oss-20b,texto,1,3f5a764b-a6e7-4309-8314-1f20d16e7559,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:41+00:00,openai/gpt-oss-20b,texto,1,2ea97b5f-657e-4531-9d72-55bc8d441359,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:41+00:00,openai/gpt-oss-20b,texto,1,954e44f6-8559-4324-82f6-671c51781cc9,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:41+00:00,openai/gpt-oss-20b,texto,1,62f34c7e-3703-4c7a-8a16-d2eca7326c48,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:06:41+00:00,openai/gpt-oss-20b,texto,1,35e60606-0195-4d75-8352-2b3e7db3d124,,,,"AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+2026-09-20T03:12:28+00:00,openai/gpt-oss-20b,texto,1,c152ae65-0ee8-4695-8f5c-ca536f9212cf,558,560,1.181,
+2026-09-20T03:12:29+00:00,openai/gpt-oss-20b,texto,1,c7b2536a-a3ee-48c0-af1d-081d76d67872,546,297,0.642,
+2026-09-20T03:12:30+00:00,openai/gpt-oss-20b,texto,1,86983498-bc58-4d37-a2de-9297ee03f03d,559,628,1.14,
+2026-09-20T03:12:31+00:00,openai/gpt-oss-20b,texto,1,862821f2-5f1d-4d9f-b433-371dfcc5e7ed,564,315,0.813,
+2026-09-20T03:12:32+00:00,openai/gpt-oss-20b,texto,1,d995bb60-e6dc-49f2-965e-66f80ab2b94e,573,641,0.999,
+2026-09-20T03:12:33+00:00,openai/gpt-oss-20b,texto,1,a6147736-ba50-4aeb-9c0c-007b753b07d5,539,274,1.203,
+2026-09-20T03:12:34+00:00,openai/gpt-oss-20b,texto,1,a7538344-c611-4d4e-902a-fd2d32beff61,540,574,0.932,
+2026-09-20T03:12:35+00:00,openai/gpt-oss-20b,texto,1,5cd50cb5-8f83-4f52-9947-d8a2a8de6870,551,716,1.157,
+2026-09-20T03:12:36+00:00,openai/gpt-oss-20b,texto,1,1269545a-f9a6-4584-9e36-914e374552c9,549,659,6.272,
+2026-09-20T03:12:43+00:00,openai/gpt-oss-20b,texto,1,52dff8fd-68fb-4d21-b67f-3f56e6aee60a,546,573,7.169,
+2026-09-20T03:12:50+00:00,openai/gpt-oss-20b,texto,1,e2f53fd9-e3e8-4e8e-bbd5-199712c7d4f0,561,584,6.237,
+2026-09-20T03:12:56+00:00,openai/gpt-oss-20b,texto,1,0a6226f5-3035-44a0-935c-771dd2b5adeb,554,244,7.965,
+2026-09-20T03:13:04+00:00,openai/gpt-oss-20b,texto,1,b4728237-e2bc-42c3-880c-abd27ab09283,550,703,5.48,
+2026-09-20T03:13:09+00:00,openai/gpt-oss-20b,texto,1,5157b0db-9919-41bb-b192-de9f69b96c71,543,606,9.353,
+2026-09-20T03:13:19+00:00,openai/gpt-oss-20b,texto,1,d3c80edd-d4ac-4a6d-ab61-7a4b77a49f8a,553,543,8.535,
+2026-09-20T03:13:27+00:00,openai/gpt-oss-20b,texto,1,9b7315a7-054b-4dbb-833e-5fba1784698d,543,230,5.804,
+2026-09-20T03:13:33+00:00,openai/gpt-oss-20b,texto,1,996c2aba-6c12-44cb-afef-26c1d3e9f395,547,542,4.115,
+2026-09-20T03:13:37+00:00,openai/gpt-oss-20b,texto,1,602fd2d4-f44c-4896-b35a-b4690eaf69eb,552,559,8.223,
+2026-09-20T03:13:45+00:00,openai/gpt-oss-20b,texto,1,d48d42a1-b327-433e-af2c-b7949d9cf05a,554,299,8.029,
+2026-09-20T03:13:53+00:00,openai/gpt-oss-20b,texto,1,46919d93-d90d-49c1-8f95-8fd33aaa5d3a,573,664,5.29,
+2026-09-20T03:13:59+00:00,openai/gpt-oss-20b,texto,1,2bec0512-87e6-4a9d-b6cf-e558520b7fd2,545,719,7.313,
+2026-09-20T03:14:06+00:00,openai/gpt-oss-20b,texto,1,31bc9d81-e5b6-4856-98a7-94360fba0ad5,549,550,9.459,
+2026-09-20T03:14:16+00:00,openai/gpt-oss-20b,texto,1,b2def845-c9fb-46b1-9dbc-2facc05f7326,569,780,6.422,
+2026-09-20T03:14:22+00:00,openai/gpt-oss-20b,texto,1,8c76d4f2-5983-45d4-8d34-6586f8a43e4f,555,627,9.187,
+2026-09-20T03:14:31+00:00,openai/gpt-oss-20b,texto,1,7538c89d-6400-4d11-a73f-f3b5a546848a,566,534,10.886,
+2026-09-20T03:14:42+00:00,openai/gpt-oss-20b,texto,1,91d8facd-306c-47ba-b652-39c7cdcdca30,545,516,7.108,
+2026-09-20T03:14:49+00:00,openai/gpt-oss-20b,texto,1,9cdbeb1f-e658-4614-abb3-1ee0493a0b93,561,859,9.071,
+2026-09-20T03:14:58+00:00,openai/gpt-oss-20b,texto,1,d36a20c8-63f3-4816-a548-d64c64c1519d,547,403,10.147,
+2026-09-20T03:15:08+00:00,openai/gpt-oss-20b,texto,1,bfc4d031-420d-4efa-b799-ddb7c63ead2f,546,287,5.819,
+2026-09-20T03:15:14+00:00,openai/gpt-oss-20b,texto,1,031f9534-d1c7-49ac-8063-6f3586cc5691,555,981,7.565,
+2026-09-20T03:15:22+00:00,openai/gpt-oss-20b,texto,1,3f5a764b-a6e7-4309-8314-1f20d16e7559,537,169,10.868,
+2026-09-20T03:15:33+00:00,openai/gpt-oss-20b,texto,1,2ea97b5f-657e-4531-9d72-55bc8d441359,551,408,5.024,
+2026-09-20T03:15:38+00:00,openai/gpt-oss-20b,texto,1,954e44f6-8559-4324-82f6-671c51781cc9,567,783,9.621,
+2026-09-20T03:15:47+00:00,openai/gpt-oss-20b,texto,1,62f34c7e-3703-4c7a-8a16-d2eca7326c48,564,1171,11.445,
+2026-09-20T03:15:59+00:00,openai/gpt-oss-20b,texto,1,35e60606-0195-4d75-8352-2b3e7db3d124,544,341,7.851,
