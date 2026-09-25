@@ -1,0 +1,8 @@
+decided | agent | Lisa [Character]
+decided | next | take [Event]
+take | agent | Lisa [Character]
+take | patient | whack [Object]
+take | next | scored [Event]
+scored | agent | Lisa [Character]
+scored | patient | bullseye [Object]
+impressed | patient | Everyone [Character]

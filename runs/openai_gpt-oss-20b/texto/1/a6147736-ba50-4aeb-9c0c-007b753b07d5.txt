@@ -1,0 +1,4 @@
+lit | patient | walls [Object]
+lit | next | go [Event]
+go | agent | You [Character]
+go | location | underground [Location]
