@@ -1,0 +1,20 @@
+{
+  "triples": [
+    {"event": "knew", "rel": "agent", "arg": "Frank", "arg_type": "Character"},
+    {"event": "knew", "rel": "next", "arg": "searched", "arg_type": "Event"},
+    {"event": "searched", "rel": "agent", "arg": "Frank", "arg_type": "Character"},
+    {"event": "searched", "rel": "location", "arg": "everywhere", "arg_type": "Location"},
+    {"event": "searched", "rel": "next", "arg": "find", "arg_type": "Event"},
+    {"event": "find", "rel": "patient", "arg": "diet", "arg_type": "Object"},
+    {"event": "find", "rel": "next", "arg": "realize", "arg_type": "Event"},
+    {"event": "realize", "rel": "agent", "arg": "Frank", "arg_type": "Character"},
+    {"event": "realize", "rel": "next", "arg": "running", "arg_type": "Event"},
+    {"event": "running", "rel": "agent", "arg": "Frank", "arg_type": "Character"},
+    {"event": "running", "rel": "next", "arg": "lost", "arg_type": "Event"},
+    {"event": "lost", "rel": "agent", "arg": "Frank", "arg_type": "Character"},
+    {"event": "lost", "rel": "patient", "arg": "pounds", "arg_type": "Object"},
+    {"event": "lost", "rel": "next", "arg": "created", "arg_type": "Event"},
+    {"event": "created", "rel": "agent", "arg": "Frank", "arg_type": "Character"},
+    {"event": "created", "rel": "patient", "arg": "diet", "arg_type": "Object"}
+  ]
+}

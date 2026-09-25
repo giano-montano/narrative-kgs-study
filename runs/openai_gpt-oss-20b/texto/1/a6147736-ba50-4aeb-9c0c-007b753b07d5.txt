@@ -1,0 +1,2 @@
+go | agent | You [Character]
+go | location | underground [Location]

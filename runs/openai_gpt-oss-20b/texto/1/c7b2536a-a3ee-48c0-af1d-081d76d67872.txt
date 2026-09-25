@@ -1,0 +1,8 @@
+bought | agent | Franny [Character]
+bought | patient | blanket [Object]
+bought | next | snuggled [Event]
+snuggled | agent | Franny [Character]
+snuggled | location | blanket [Location]
+snuggled | next | watched [Event]
+watched | agent | Franny [Character]
+watched | patient | movie [Object]

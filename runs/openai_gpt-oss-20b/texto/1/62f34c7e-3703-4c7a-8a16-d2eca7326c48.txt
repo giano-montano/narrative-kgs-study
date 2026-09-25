@@ -1,0 +1,30 @@
+spent | agent | Bryan [Character]
+spent | patient | summer [Object]
+spent | next | sleeping [Event]
+
+sleeping | agent | Bryan [Character]
+sleeping | next | starting [Event]
+
+starting | agent | School [Character]
+starting | next | start [Event]
+
+start | agent | Bryan [Character]
+start | next | started [Event]
+
+started | agent | Bryan [Character]
+started | patient | bed [Object]
+started | next | going [Event]
+
+going | agent | Bryan [Character]
+going | patient | bed [Object]
+going | next | trying [Event]
+
+trying | agent | Bryan [Character]
+trying | next | get [Event]
+
+get | agent | Bryan [Character]
+get | location | morning [Location]
+get | next | get [Event]
+
+get | agent | Bryan [Character]
+get | location | morning [Location]

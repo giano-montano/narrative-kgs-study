@@ -1,0 +1,8 @@
+decided | agent | people [Character]
+decided | next | go [Event]
+go | location | Casino [Location]
+go | next | played [Event]
+played | patient | games [Object]
+played | next | made [Event]
+made | agent | people [Character]
+made | patient | money [Object]
