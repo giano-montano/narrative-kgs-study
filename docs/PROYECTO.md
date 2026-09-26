@@ -138,8 +138,6 @@ Plan gratuito de Groq, por modelo (verificar en la consola): 30 solicitudes/min,
 
 ## 9. Reparto y entregas
 
-| Quién | Entregable                                           | Fecha           |
-| ----- | ---------------------------------------------------- | --------------- |
 | Quién | Entregable                                                  | Fecha          |
 | ----- | ----------------------------------------------------------- | -------------- |
 | Diego | `stories.csv` + gold de dev (5 historias)                   | sáb 19 (hecho) |

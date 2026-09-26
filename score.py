@@ -74,6 +74,16 @@ def raw_files():
         yield model, condition, run, path
 
 
+def load_splits(path):
+    stories = pd.read_csv(path, dtype=str)
+    return dict(zip(stories["story_id"], stories["split"]))
+
+
+def run_split(run):
+    # dev1-3 son de dev; 1 y 2, de test
+    return "dev" if run.startswith("dev") else "test"
+
+
 def type_accuracy(pred_types, gold_types):
     common = set(pred_types) & set(gold_types)
     if not common:
@@ -90,7 +100,8 @@ def mean_tokens(log, model_dir, condition, run, story_ids):
         (log["story_id"].isin(story_ids)) &
         (log["error"].isna() | (log["error"] == ""))
     )
-    filtered = log[mask]
+    # una historia puede tener varias llamadas exitosas; vale la que produjo el archivo
+    filtered = log[mask].drop_duplicates(subset="story_id", keep="last")
     if filtered.empty:
         return None, None
     return float(filtered["prompt_tokens"].astype(float).mean()), float(filtered["completion_tokens"].astype(float).mean())
@@ -163,14 +174,21 @@ def main():
     parser.add_argument("--gold", default="data/gold.csv",
                         help="CSV del gold con story_id, event, rel, arg, arg_type "
                              "(default: data/gold.csv; para la prueba: data/gold_example.csv)")
+    parser.add_argument("--stories", default="data/stories.csv",
+                        help="CSV con story_id y split, para no puntuar dev dentro de test")
     args = parser.parse_args()
 
     gold = load_gold(args.gold)
     gold_ids = {g[0] for g in gold}
+    splits = load_splits(args.stories)
     cells = {}
     for model, condition, run, path in raw_files():
         if path.stem not in gold_ids:
             print(f"aviso: {path} no tiene gold, se ignora")
+            continue
+        # la corrida define el split: nada de dev dentro de test ni al revés
+        if splits.get(path.stem) != run_split(run):
+            print(f"aviso: {path} no pertenece al split de la corrida {run}, se ignora")
             continue
         raw = path.read_text(encoding="utf-8")
         cells.setdefault((model, condition, run), {})[path.stem] = parse(raw, condition)
