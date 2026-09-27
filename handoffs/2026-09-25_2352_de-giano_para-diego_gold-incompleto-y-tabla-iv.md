@@ -3,7 +3,7 @@ de: giano
 para: [diego]
 proposito: [bloqueo, pregunta]
 creado: 2026-09-25T23:52-05:00
-estado: abierto
+estado: cerrado
 responde_a: [2026-09-25_0015_de-diego_para-leo_gold-congelado.md]
 ---
 

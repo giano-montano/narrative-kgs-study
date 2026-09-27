@@ -151,20 +151,26 @@ Al evaluar la calidad del grafo de conocimiento extraído (excluyendo la relaci�
 
 ***C. Análisis de Significancia (Bootstrap Pareado)***
 
-Para determinar si estas variaciones representan un efecto real del formato de salida, se calculó la diferencia de F1 historia por historia y se aplicó un remuestreo por bootstrap pareado (1000 iteraciones). Como se observa en la Figura 2, los intervalos de confianza del 95% para las seis comparaciones evaluadas incluyeron el cero.
+Para determinar si estas variaciones representan un efecto real del formato de salida, se calculó la diferencia de F1 historia por historia y se aplicó un remuestreo por bootstrap pareado (1000 iteraciones). Como se observa en la Figura 2, los intervalos de confianza del 95% para las doce comparaciones evaluadas incluyeron el cero.
 
 ***Fig. 2\.** Intervalos de confianza al 95% para la diferencia de F1 entre condiciones (bootstrap pareado).*
 
 **TABLA IV.** DIFERENCIA DE F1 E INTERVALOS DE CONFIANZA 95% (BOOTSTRAP PAREADO) 
 
-| Comparación | Diferencia media | IC 95% inferior | IC 95% superior |
-| ----- | ----- | ----- | ----- |
-| 120b: Texto vs JSON Objeto | −0.0305 | −0.0887 | 0.0234 |
-| 120b: Texto vs JSON Estricto | −0.0369 | −0.0878 | 0.0160 |
-| 120b: JSON Objeto vs JSON Estricto | −0.0063 | −0.0418 | 0.0312 |
-| 20b: Texto vs JSON Objeto | 0.0271 | −0.0417 | 0.0976 |
-| 20b: Texto vs JSON Estricto | 0.0325 | −0.0287 | 0.0974 |
-| 20b: JSON Objeto vs JSON Estricto | 0.0055 | −0.0724 | 0.0843 |
+| Comparación | Corrida | Diferencia media | IC 95% inferior | IC 95% superior |
+| ----------- | ------- | ---------------- | --------------- | --------------- |
+| 120b: Texto vs JSON Objeto | 1 | -0.0388 | -0.0944 | 0.0125 |
+| 120b: Texto vs JSON Estricto | 1 | -0.0478 | -0.1012 | 0.0009 |
+| 120b: JSON Objeto vs JSON Estricto | 1 | -0.0089 | -0.0448 | 0.0278 |
+| 120b: Texto vs JSON Objeto | 2 | -0.0369 | -0.0982 | 0.0148 |
+| 120b: Texto vs JSON Estricto | 2 | -0.0396 | -0.0841 | 0.0078 |
+| 120b: JSON Objeto vs JSON Estricto | 2 | -0.0027 | -0.0388 | 0.0358 |
+| 20b: Texto vs JSON Objeto | 1 | 0.0091 | -0.0496 | 0.0750 |
+| 20b: Texto vs JSON Estricto | 1 | 0.0024 | -0.0508 | 0.0500 |
+| 20b: JSON Objeto vs JSON Estricto | 1 | -0.0068 | -0.0787 | 0.0573 |
+| 20b: Texto vs JSON Objeto | 2 | 0.0454 | -0.0360 | 0.1236 |
+| 20b: Texto vs JSON Estricto | 2 | 0.0388 | -0.0306 | 0.1201 |
+| 20b: JSON Objeto vs JSON Estricto | 2 | -0.0066 | -0.1008 | 0.1000 |
 
 Al no encontrar diferencias estadísticamente significativas en ninguna de las comparaciones, fallamos en rechazar la hipótesis nula. Esto sugiere que, para esta tarea de extracción, la imposición de un formato estricto no degrada ni mejora de manera consistente la calidad general de la extracción.
 
