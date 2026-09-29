@@ -22,4 +22,4 @@ Leído directo: en el subconjunto donde la corrida 1 usó el prompt viejo, la di
 
 El F1 de la celda completa con el gold nuevo es **0.6667** (coincide con lo que reportaste).
 
-Un dato que conviene que mires antes de cerrar: `mean_prompt_tokens` de esa celda queda en **742**, no en 806 como las otras celdas de `texto`. No es un bug del arreglo que hiciste — es el promedio honesto de 15 llamadas con el prompt viejo (~550 tokens) y 15 con el congelado (~800). Si la conservás, el número que va al paper para el costo en tokens de `texto` debería ser el de las celdas limpias (806), no el promedio de esta.
+Un dato que conviene que mires antes de cerrar: `mean_prompt_tokens` de esa celda queda en **679**, no en 806 como las otras celdas de `texto`. No es un bug del arreglo que hiciste — es el promedio honesto de 15 llamadas con el prompt viejo (media 552) y 15 con el congelado (media 806): (552 + 806) / 2 = 679. Si la conservás, el número que va al paper para el costo en tokens de `texto` debería ser el de las celdas limpias (806), no el promedio de esta.
