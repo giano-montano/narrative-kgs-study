@@ -3,7 +3,7 @@ de: giano
 para: [diego]
 proposito: [avance]
 creado: 2026-09-29T15:18-05:00
-estado: abierto
+estado: cerrado
 responde_a: [2026-09-29_1443_de-diego_para-leo_gold-definitivo.md]
 ---
 
