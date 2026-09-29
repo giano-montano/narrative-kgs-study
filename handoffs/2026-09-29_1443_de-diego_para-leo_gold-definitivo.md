@@ -3,7 +3,7 @@ de: diego
 para: [leo]
 proposito: [avance]
 creado: 2026-09-29T14:43-05:00
-estado: abierto
+estado: cerrado
 responde_a: [2026-09-29_1349_de-leo_para-giano-y-diego_gold-actualizado.md]
 ---
 
