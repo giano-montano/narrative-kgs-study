@@ -188,7 +188,7 @@ Entregas entre personas, todas con un handoff en `handoffs/`:
 - ~~Que la respuesta guardada contenga solo el contenido final~~ **Verificado:** los 390 archivos parsean completos bajo la regla de todo o nada, así que ninguno trae texto de razonamiento.
 - ~~Tokens reales por llamada~~ **Medido:** prompt 806 / 968 / 1102 (`texto` / `json_objeto` / `json_estricto`); total por llamada entre ≈1200 y ≈1920, bajo el umbral de 2 500 de la regla 7.5.
 - Si el caché de prompts aplica a gpt-oss.
-- Condiciones de uso de ROCStories.
+- Condiciones de uso de ROCStories. **Revisado el 29 sep** en <https://cs.rochester.edu/nlp/rocstories/>: el acceso es gratuito y exige llenar un formulario; la página no publica una licencia ni dice nada sobre redistribuir los textos. Como no hay permiso explícito, se mantiene la regla 7.6: al publicar se comparten IDs y anotaciones, no `data/stories.csv` ni los textos. Cita obligatoria: Mostafazadeh, Chambers, He, Parikh, Batra, Vanderwende, Kohli y Allen (2016), NAACL-HLT (arXiv:1604.01696).
 
 ## 13. Referencias clave
 
