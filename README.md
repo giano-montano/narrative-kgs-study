@@ -89,3 +89,8 @@ Cita:
 - **`429`:** son los límites del plan gratuito (30 solicitudes/min, 8 000 tokens/min por modelo). `run.py` espera lo que indique la API y reintenta hasta 3 veces; si igual falla, queda anotado en `log.csv` y sigue con la siguiente historia.
 - **Cualquier otro error:** se registra en la columna `error` de `runs/log.csv` y la corrida continúa. Volver a lanzar el mismo comando reintenta solo las historias sin respuesta.
 - **`score.py` avisa "no tiene gold":** hay respuestas en `runs/` de historias que el gold todavía no cubre. Es normal mientras el gold de test no esté listo.
+
+## Licencia
+
+- **Código:** MIT, ver [`LICENSE`](LICENSE).
+- **Datos** (`data/` y `demo/public/data.json`): CC BY-SA 4.0, ver la sección *Dataset*.
