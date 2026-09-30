@@ -66,6 +66,18 @@ python run.py --model openai/gpt-oss-20b --condition texto --run dev1 --split de
 python score.py --gold data/gold_example.csv
 ```
 
+## Dataset
+
+`data/stories.csv` es un subconjunto sin modificar de 35 historias de ROCStories, de Nasrin Mostafazadeh et al., obtenido por el formulario oficial.
+
+- Fuente: <https://cs.rochester.edu/nlp/rocstories/>
+- Licencia: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), declarada por la autora en <https://nasrin.info/publications/>.
+- `data/gold.csv` es una anotación propia derivada de esas historias y se distribuye también bajo CC BY-SA 4.0.
+
+Cita:
+
+> Mostafazadeh, N., Chambers, N., He, X., Parikh, D., Batra, D., Vanderwende, L., Kohli, P., & Allen, J. (2016). A Corpus and Cloze Evaluation for Deeper Understanding of Commonsense Stories. *NAACL-HLT*.
+
 ## Tres reglas que no se rompen
 
 1. **Nunca se llama dos veces por la misma historia.** Si ya existe la respuesta cruda, `run.py` la salta. Un error de parseo se arregla en `score.py` y se vuelve a puntuar, sin gastar cuota.

@@ -130,7 +130,7 @@ Dependencias: `groq`, `pydantic`, `pandas`, `numpy`. No se agrega ninguna otra s
 3. El gold de test se anota sin ver salidas del modelo y se congela con un commit antes de puntuar.
 4. Toda respuesta cruda y su metadata se versionan.
 5. Si el promedio de tokens por llamada pasa de 2 500, el test baja a 1 corrida.
-6. El repo es privado hasta verificar las condiciones de uso de ROCStories. Al publicar, se comparten IDs y anotaciones, no los textos.
+6. ROCStories es CC BY-SA 4.0 (declarado por la autora, ver sección 12). Al publicar se incluye `data/stories.csv` con atribución; `data/` se publica bajo CC BY-SA 4.0.
 
 ## 8. Límites de la API
 
