@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grafos narrativos en vivo</title>
+  <meta name="description" content="Demo del estudio narrative-kgs-study: un LLM extrae el grafo de una historia de ROCStories en vivo y se compara con el gold.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='8' cy='16' r='5' fill='%23a78bfa'/><circle cx='24' cy='8' r='4' fill='%2360a5fa'/><circle cx='24' cy='24' r='4' fill='%2334d399'/><path d='M8 16L24 8M8 16L24 24' stroke='%23e2e8f0' stroke-width='2'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <header class="hero">
+    <p class="eyebrow">IEEE CS PUCP · narrative-kgs-study</p>
+    <h1>¿Cambia el grafo según <em>cómo</em> le pides escribirlo?</h1>
+    <p class="lede">
+      Elige una historia de ROCStories, un modelo y un formato de salida. El modelo extrae en vivo, vía Groq,
+      las tripletas <code>(evento, relación, argumento)</code> con el mismo prompt del experimento, y el resultado se compara contra el gold anotado a mano.
+    </p>
+  </header>
+
+  <main>
+    <section class="card controls">
+      <div class="field field-story">
+        <label for="story">Historia</label>
+        <div class="row">
+          <select id="story"></select>
+          <button id="shuffle" class="icon-btn" title="Historia al azar" aria-label="Historia al azar">
+            <svg viewBox="0 0 24 24" width="20" height="20"><rect x="3" y="3" width="18" height="18" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="8.5" cy="8.5" r="1.6" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.6" fill="currentColor"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="field">
+        <label>Modelo</label>
+        <div class="seg" id="model" role="radiogroup">
+          <button data-v="openai/gpt-oss-120b" role="radio">gpt-oss-120b</button>
+          <button data-v="openai/gpt-oss-20b" role="radio">gpt-oss-20b</button>
+        </div>
+        <p class="hint" id="model-hint"></p>
+      </div>
+      <button id="run" class="run-btn">
+        <span class="run-label">Extraer grafo</span>
+        <svg viewBox="0 0 24 24" width="18" height="18"><path d="M7 4l13 8-13 8z" fill="currentColor"/></svg>
+      </button>
+      <div class="field field-conds">
+        <label>Formato de salida</label>
+        <div class="conds" id="conds" role="radiogroup"></div>
+      </div>
+    </section>
+
+    <section class="card implication" id="implication"></section>
+
+    <section class="card story-card">
+      <div class="story-head">
+        <h2>La historia</h2>
+        <span class="pill-tag" id="story-split"></span>
+      </div>
+      <p id="story-text" class="story-text"></p>
+      <p class="hint">Pasa el cursor sobre una palabra o un nodo para ubicarlo en los dos grafos.</p>
+    </section>
+
+    <div class="toolbar">
+      <div class="legend" id="legend"></div>
+      <div class="seg small" id="color-mode" role="radiogroup" aria-label="Color de las aristas">
+        <button data-v="rel" role="radio">Color por relación</button>
+        <button data-v="match" role="radio">Color por acierto</button>
+      </div>
+    </div>
+
+    <section class="graphs">
+      <div class="card graph-card" id="model-card">
+        <div class="graph-head">
+          <h2>Modelo <small id="model-caption"></small></h2>
+          <span class="status" id="status">en espera</span>
+        </div>
+        <div class="graph-wrap">
+          <svg id="g-model" role="img" aria-label="Grafo extraído por el modelo"></svg>
+          <div class="empty" id="model-empty"><p>Pulsa <b>Extraer grafo</b> para llamar al modelo.</p></div>
+          <div class="thought" id="thought" hidden><span class="dot"></span><span id="thought-text"></span></div>
+          <div class="invalid" id="invalid" hidden></div>
+        </div>
+      </div>
+      <div class="card graph-card">
+        <div class="graph-head">
+          <h2>Gold <small>anotado a mano</small></h2>
+          <span class="status gold" id="gold-count"></span>
+        </div>
+        <div class="graph-wrap">
+          <svg id="g-gold" role="img" aria-label="Grafo gold"></svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="card history" id="history" hidden>
+      <h3>Tus corridas en esta historia</h3>
+      <div class="history-list" id="history-list"></div>
+    </section>
+
+    <section class="card metrics" id="metrics">
+      <div class="metrics-main">
+        <svg id="gauge" viewBox="0 0 160 160" aria-hidden="true"></svg>
+        <div class="pr">
+          <div class="metric-row"><span>Precisión</span><div class="bar"><i id="bar-p"></i></div><b id="val-p">–</b></div>
+          <div class="metric-row"><span>Recall</span><div class="bar"><i id="bar-r"></i></div><b id="val-r">–</b></div>
+          <p class="hint" id="metrics-note">Sin <code>next</code>, como la métrica principal del estudio. Acierto = <code>(evento, relación, argumento)</code> idéntico al gold tras normalizar.</p>
+        </div>
+      </div>
+      <div class="by-rel">
+        <h3>F1 por relación</h3>
+        <div id="rel-bars"></div>
+      </div>
+      <div class="facts" id="facts"></div>
+    </section>
+
+    <section class="io">
+      <div class="card">
+        <div class="io-head"><h3>Respuesta cruda</h3><span class="hint" id="chunk-info"></span></div>
+        <pre id="raw" class="raw"></pre>
+        <details class="reasoning">
+          <summary>Razonamiento del modelo</summary>
+          <pre id="reasoning" class="raw small"></pre>
+          <p class="hint">gpt-oss razona antes de responder. En el experimento se descartaba (<code>include_reasoning=False</code>); aquí se muestra, pero no cambia lo que genera.</p>
+        </details>
+      </div>
+      <div class="card">
+        <h3>Tripletas comparadas</h3>
+        <div id="diff" class="diff"><p class="hint">Aparecen cuando el modelo responde.</p></div>
+      </div>
+    </section>
+
+    <section class="card experiment">
+      <h2>Lo que encontró el experimento</h2>
+      <p class="lede small">30 historias de test, 2 corridas por celda. F1 micro sin <code>next</code>.</p>
+      <div class="exp-grid">
+        <svg id="exp-chart" role="img" aria-label="F1 por modelo y condición"></svg>
+        <div class="exp-text" id="exp-text"></div>
+      </div>
+    </section>
+
+    <details class="card prompt-view">
+      <summary>Ver la llamada exacta que se hace a Groq</summary>
+      <pre id="prompt" class="raw small"></pre>
+    </details>
+  </main>
+
+  <footer>
+    <p>
+      Historias: <a href="https://cs.rochester.edu/nlp/rocstories/" target="_blank" rel="noopener">ROCStories</a>,
+      Mostafazadeh et al. (2016), <em>A Corpus and Cloze Evaluation for Deeper Understanding of Commonsense Stories</em>, NAACL-HLT.
+      Distribuidas bajo <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>;
+      el gold derivado se comparte bajo la misma licencia.
+    </p>
+    <p>Modelos servidos por Groq (plan gratuito): si muchas personas lo usan a la vez puede pedir esperar unos segundos.</p>
+  </footer>
+
+  <div class="tooltip" id="tooltip" hidden></div>
+  <div class="toast" id="toast" hidden></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
