@@ -3,7 +3,7 @@ de: leo
 para: [giano, diego]
 proposito: [avance]
 creado: 2026-09-29T18:31-05:00
-estado: abierto
+estado: cerrado
 responde_a: [2026-09-29_1520_de-giano_para-leo_recalculo-celda-mezclada.md, 2026-09-29_1443_de-diego_para-leo_gold-definitivo.md]
 ---
 

@@ -3,7 +3,7 @@ de: leo
 para: [giano, diego]
 proposito: [bloqueo]
 creado: 2026-09-29T13:49-05:00
-estado: abierto
+estado: cerrado
 responde_a: [2026-09-25_2350_de-giano_para-leo_filtro-split-y-prompt-mezclado.md]
 ---
 

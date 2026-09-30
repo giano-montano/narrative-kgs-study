@@ -1,7 +1,7 @@
 # Preprint: efecto del formato de salida en la extracción de KGs narrativos con LLMs
 
 > Fuente de verdad del proyecto. Si una decisión cambia, se cambia primero aquí.
-> Estado al 17 sep 2026: diseño cerrado, implementación por empezar.
+> Estado al 29 sep 2026: experimento cerrado; resultados finales en `results/` (gold de `ad7e9d8`). Falta el paper.
 
 ## 1. Qué es
 
@@ -178,12 +178,15 @@ Entregas entre personas, todas con un handoff en `handoffs/`:
 - Con 30 historias solo se detectan diferencias grandes.
 - Posible contaminación: ROCStories probablemente está en el preentrenamiento.
 - gpt-oss razona antes de responder, lo que puede atenuar el efecto del formato.
+- Las tres condiciones dieron 100 % de salidas válidas en ambos modelos y corridas, así que la hipótesis sobre salidas inválidas no se pudo poner a prueba.
+- En `20b/texto/1`, 15 de las 30 historias de test se corrieron con el prompt anterior a `prompts-frozen` (viola 7.2). Leo decidió conservar la celda: en ese subconjunto la diferencia entre corridas es −0.010, menor que la del subconjunto con prompt congelado en ambas (−0.045). El costo en tokens de `texto` se reporta con las celdas limpias (806), no con esta (679).
+- El gold de test se completó después de puntuar: `62f34c7e` pasó de 3 a 19 filas en `ad7e9d8`, marcada por la auditoría por motivos estructurales (un `next` colgado y muchas menos filas que el resto), sin mirar predicciones. Se volvió a puntuar. El tag `gold-test-frozen` marca el gold anterior (505 filas); el definitivo es `ad7e9d8` (521 filas).
 
 ## 12. Pendientes por verificar
 
-- Que `json_estricto` realmente restrinja en gpt-oss en Groq (hubo un reporte de regresión en 2025). Se comprueba con 100 % de salidas válidas en dev.
-- Que la respuesta guardada contenga solo el contenido final y no el razonamiento del modelo.
-- Tokens reales por llamada.
+- ~~Que `json_estricto` realmente restrinja en gpt-oss en Groq~~ **Verificado:** 0 salidas inválidas en los 390 archivos con gold, reparseados de forma independiente. Las otras dos condiciones también dieron 100 %.
+- ~~Que la respuesta guardada contenga solo el contenido final~~ **Verificado:** los 390 archivos parsean completos bajo la regla de todo o nada, así que ninguno trae texto de razonamiento.
+- ~~Tokens reales por llamada~~ **Medido:** prompt 806 / 968 / 1102 (`texto` / `json_objeto` / `json_estricto`); total por llamada entre ≈1200 y ≈1920, bajo el umbral de 2 500 de la regla 7.5.
 - Si el caché de prompts aplica a gpt-oss.
 - Condiciones de uso de ROCStories.
 

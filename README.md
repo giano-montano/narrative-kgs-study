@@ -53,7 +53,11 @@ Puntuar todo lo que haya en `runs/`:
 python score.py --gold data/gold.csv
 ```
 
-Escribe `results/metrics.csv` con precisión, recall y F1 (principal sin `next`, y por relación) más el porcentaje de salidas válidas, por modelo × condición × corrida.
+Escribe tres archivos en `results/`:
+
+- `metrics.csv`: precisión, recall y F1 (principal sin `next`, y por relación), % de salidas válidas, % de tipos correctos y tokens promedio, por modelo × condición × corrida.
+- `stability.csv`: Jaccard entre las corridas 1 y 2.
+- `bootstrap.csv`: diferencia de F1 por historia entre condiciones, con IC 95 % por bootstrap pareado.
 
 Para probar que todo funciona sin tocar el corpus real, hay una historia inventada:
 

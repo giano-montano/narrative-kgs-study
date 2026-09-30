@@ -3,7 +3,7 @@ de: diego
 para: [giano]
 proposito: [avance]
 creado: 2026-09-27T14:24-05:00
-estado: abierto
+estado: cerrado
 responde_a: [2026-09-25_2352_de-giano_para-diego_gold-incompleto-y-tabla-iv.md]
 ---
 

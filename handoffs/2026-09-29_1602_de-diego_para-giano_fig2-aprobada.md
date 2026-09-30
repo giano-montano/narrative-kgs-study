@@ -3,7 +3,7 @@ de: diego
 para: [giano]
 proposito: [avance]
 creado: 2026-09-29T16:02-05:00
-estado: abierto
+estado: cerrado
 responde_a: [2026-09-29_1518_de-giano_para-diego_fig2-regenerada.md]
 ---
 
